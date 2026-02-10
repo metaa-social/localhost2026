@@ -1,1 +1,38 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: Gerrit;
+  font-style: normal;
+  font-display: block;
+  src: url("./gerrit.woff2") format("woff2");
+}
+
+@theme {
+  --font-sans: "Gerrit";
+  --color-brand: #b09ce3;
+
+  --breakpoint-tablet: 52.125rem; /* 52.125rem (834px) */
+  --breakpoint-tablet: 48rem; /* 768 px smaller ipads */ 
+  --breakpoint-desktop: 80rem; /* 80rem (1280px), tailwind xl breakpoint */
+
+  --max-content-width: 1600px;
+}
+
+@layer base {
+  body {
+    text-rendering: geometricPrecision;
+    -webkit-font-smoothing: antialiased; 
+    -moz-osx-font-smoothing: grayscale; 
+    font-optical-sizing: none;
+    font-synthesis: none;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-brand;
+
+    & > * {
+      @apply max-w-(--max-content-width) w-full mx-auto;
+    }
+  }
+}
