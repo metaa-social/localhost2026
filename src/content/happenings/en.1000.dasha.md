@@ -7,6 +7,7 @@ website: https://dashailina.com/
 instagram: https://www.instagram.com/dashesandcommas/?hl=en
 datetime: 2026-02-10T18:30:00
 format: ["keynote", "qa"]
+place: amaretto
 ---
 
 Dasha Ilina is a Russian technocritical artist based in Paris. She employs low-tech and DIY approaches to question, document, and challenge the mythology surrounding technology, ultimately revealing what it tells us about the world. 

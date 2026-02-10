@@ -1,0 +1,34 @@
+---
+import { getImage } from "astro:assets";
+import videoPoster from "../assets/video-poster.png";
+
+const poster = await getImage({
+  src: videoPoster,
+  widths: [480, 720, 1080, 1920],
+  sizes: `100vw`
+})
+---
+
+<media-controller gesturesdisabled nohotkeys class="block">
+  <img
+    slot="poster"
+    src={poster.src}
+    srcset={poster.srcSet.attribute}
+    alt="Slightly animating text thay says localhost:2026"
+    decoding="async" />
+
+  <hls-video
+    src="/banner/master.m3u8"
+    slot="media"
+    crossorigin
+    autoplay
+    loop
+    muted
+  ></hls-video>
+</media-controller>
+
+<script>
+  import "media-chrome";
+  import 'hls-video-element';
+
+</script>

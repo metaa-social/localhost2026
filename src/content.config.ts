@@ -14,7 +14,7 @@ const happenings = defineCollection({
     name: z.string(),
     punchline: z.string().optional(),
     format: z.union([z.enum(formats), z.array(z.enum(formats))]), // single or multiple
-    datetime: datetime,
+    datetime: z.date(),
     place: reference("places"),
     website: z.string().url().optional(),
     instagram: z.string().url().optional(),
