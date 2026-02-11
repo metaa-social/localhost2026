@@ -11,7 +11,6 @@
   --font-sans: "Gerrit";
   --color-brand: #b09ce3;
 
-  --breakpoint-tablet: 52.125rem; /* 52.125rem (834px) */
   --breakpoint-tablet: 48rem; /* 768 px smaller ipads */ 
   --breakpoint-desktop: 80rem; /* 80rem (1280px), tailwind xl breakpoint */
 
@@ -32,11 +31,35 @@
     @apply bg-brand;
 
     & > * {
-      @apply max-w-(--max-content-width) w-full mx-auto;
+      /* @apply max-w-(--max-content-width) w-full mx-auto; */
     }
+  }
+
+  .blurred-borders {
+    box-shadow: 0 0 0 1px red, 
+                    0 0 0 2px green, 
+                    0 0 0 3px blue, 
+                    0 0 0 4px yellow;
+  }
+
+}
+
+
+
+@layer components {
+  
+  .button {
+    @apply text-base desktop:text-xl; 
+    @apply tracking-[0.02em] desktop:tracking-[0.025em];
+
+    &.button-primary {
+      
+    } 
+
+    &.button--secondary {
+
+    }
+
   }
 }
 
-/* @utility text-body { */
-/*   @text- */
-/* } */

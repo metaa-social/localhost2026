@@ -6,5 +6,9 @@ import * as m from "../paraglide/messages";
 
 <Layout>
   <h1>Astro {m.example_message({username: "Tibor"})}</h1>
-  <LoopingVideo />
+
+  <div class="grid grid-cols-1 grid-rows-1 px-2 w-fit _bg-red-500 _blur-[1px]">
+    <div class="blurred-borders row-start-1 col-start-1 _outline-2 _outline-red-500 blur-[1px]"></div>
+    <div class="row-start-1 col-start-1 px-2 py-2">test 2</div>
+  </div>
 </Layout>
