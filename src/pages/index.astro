@@ -1,5 +1,5 @@
 ---
-import Layout from "../layouts/Layout.astro"
+import Layout from "../layouts/Layout.astro";
 import LoopingVideo from "../components/LoopingVideo.astro";
 import Button from "../components/Button.astro";
 import * as m from "../paraglide/messages";
@@ -8,16 +8,19 @@ import { getEntry } from "astro:content";
 // const locale = Astro.currentLocale;
 const locale = "en";
 const globals = await getEntry("globals", locale);
-const {title, punchline, dateText, addressText, orgHref, orgName, orgAbbrev} = globals!.data;
+const { title, punchline, dateText, addressText, orgHref, orgName, orgAbbrev } =
+  globals!.data;
 ---
 
 <Layout>
   <div class:list={["pageHeader"]}>
-    <span class="pageHeader__title">{title}</span>     
-    <span class="pageHeader__punchline">{punchline}</span>     
+    <span class="pageHeader__title">{title}</span>
+    <span class="pageHeader__punchline">{punchline}</span>
     <LoopingVideo class="pageHeader__video bg-electric-purple" />
-    <span class="pageHeader__datetime">{dateText}<br>{addressText}</span>
-    <span class="pageHeader__org">{m.hosted_by()}<br><a href={orgHref}>{orgAbbrev}</a></span>
+    <span class="pageHeader__datetime">{dateText}<br />{addressText}</span>
+    <span class="pageHeader__org"
+      >{m.hosted_by()}<br /><a href={orgHref}>{orgAbbrev}</a></span
+    >
   </div>
 
   <nav class:list={["nav"]}>
@@ -30,13 +33,12 @@ const {title, punchline, dateText, addressText, orgHref, orgName, orgAbbrev} = g
     <Button href="#metaa" class="">{m.btn_metaa()}</Button>
     <Button href="#partners" class="">{m.btn_partners()}</Button>
     <Button href="/fr" class="">{m.btn_langToggle()}</Button>
-      <Button href="https://google.com" class="nav__action-button button--primary">{m.btn_book()}</Button>
+    <Button href="https://google.com" class="nav__action-button button--primary"
+      >{m.btn_book()}</Button
+    >
   </nav>
 
-  <div class="divider" />
+  <div class="divider"></div>
 
-  <section id="about">
-    
-  </section>
-
+  <section id="about"></section>
 </Layout>
