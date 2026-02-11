@@ -3,9 +3,40 @@ import Layout from "../layouts/Layout.astro"
 import LoopingVideo from "../components/LoopingVideo.astro";
 import Button from "../components/Button.astro";
 import * as m from "../paraglide/messages";
+import { getEntry } from "astro:content";
+
+// const locale = Astro.currentLocale;
+const locale = "en";
+const globals = await getEntry("globals", locale);
+const {title, punchline, dateText, addressText, orgHref, orgName, orgAbbrev} = globals!.data;
 ---
 
 <Layout>
-  <h1>Astro {m.example_message({username: "Tibor"})}</h1>
-  <Button href="#" class="">Book Tickets</Button>
+  <div class:list={["pageHeader"]}>
+    <span class="pageHeader__title">{title}</span>     
+    <span class="pageHeader__punchline">{punchline}</span>     
+    <LoopingVideo class="pageHeader__video bg-electric-purple" />
+    <span class="pageHeader__datetime">{dateText}<br>{addressText}</span>
+    <span class="pageHeader__org">{m.hosted_by()}<br><a href={orgHref}>{orgAbbrev}</a></span>
+  </div>
+
+  <nav class:list={["nav"]}>
+    <Button href="#about" class="">{m.btn_about()}</Button>
+    <Button href="#timetable" class="">{m.btn_timetable()}</Button>
+    <Button href="#speakers" class="">{m.btn_speakers()}</Button>
+    <Button href="#performances" class="">{m.btn_performances()}</Button>
+    <Button href="#workshops" class="">{m.btn_workshops()}</Button>
+    <Button href="#tickets" class="">{m.btn_tickets()}</Button>
+    <Button href="#metaa" class="">{m.btn_metaa()}</Button>
+    <Button href="#partners" class="">{m.btn_partners()}</Button>
+    <Button href="/fr" class="">{m.btn_langToggle()}</Button>
+      <Button href="https://google.com" class="nav__action-button button--primary">{m.btn_book()}</Button>
+  </nav>
+
+  <div class="divider" />
+
+  <section id="about">
+    
+  </section>
+
 </Layout>

@@ -32,16 +32,85 @@
 
 @layer components {
  
+  .divider {
+    @apply bg-transparent h-3;
+    @apply border-t-0;
+    @apply bg-black;
+    @apply rounded-full;
+
+    box-shadow: 
+    inset 0 0 0 1px var(--color-silver), 
+    inset 0 0 0 2px var(--color-electric-purple), 
+    inset 0 0 0 3px var(--color-silver), 
+    inset 0 0 0 4px var(--color-spring-green), 
+    inset 0 0 0 5px var(--color-electric-purple);
+    filter: blur(1px);
+  }
+
+  .section {
+    
+  }
+
+  .pageHeader {
+    @apply grid grid-cols-2;
+
+    & .pageHeader__title {
+      @apply col-span-full desktop:col-span-1;
+    }
+
+    & .pageHeader__punchline {
+      @apply col-span-full desktop:col-span-1;
+    }
+
+    & .pageHeader__video {
+      @apply col-span-full;
+    }
+
+    & .pageHeader__datetime {
+      
+    }
+    
+    & .pageHeader__org {
+
+    }
+
+    /* @variant desktop { */
+    /*   grid-template-columns: auto; */
+    /* } */
+
+    
+  }
+
+  .nav {
+    @apply flex flex-wrap;
+
+    & .nav__action-button {
+      @apply fixed bottom-4 right-4;
+      @apply desktop:static; 
+    }
+  }
+
+
+  .loopingVideo {
+    @apply flex items-center justify-center;
+    @apply aspect-715/518 desktop:aspect-1540/508;
+
+    & > media-controller {
+      @apply w-full h-fit;
+    }
+  }
+
   .button {
     @apply text-base desktop:text-xl; 
     @apply tracking-[0.02em] desktop:tracking-[0.025em];
     @apply leading-none;
 
-    --btn-bg: var(--color-black);
-    --btn-text: var(--color-silver);
+    /* default is secondary  */
+    --btn-bg: var(--color-lavender);
+    --btn-text: var(--color-black);
     --btn-bg-hover: var(--color-black);
-    --btn-text-hover: var(--color-spring-green);
-    --btn-bg-active: var(--color-spring-green);
+    --btn-text-hover: var(--color-lavender);
+    --btn-bg-active: var(--color-electric-purple);
     --btn-text-active: var(--color-black);
 
     & > .button__content {
@@ -51,8 +120,13 @@
       color: var(--btn-text);
     }
 
-    &.button-primary {
-       
+    &.button--primary {
+      --btn-bg: var(--color-black);
+      --btn-text: var(--color-silver);
+      --btn-bg-hover: var(--color-black);
+      --btn-text-hover: var(--color-spring-green);
+      --btn-bg-active: var(--color-spring-green);
+      --btn-text-active: var(--color-black);
     } 
 
     &.button--secondary {
@@ -77,7 +151,6 @@
     & > .button__border-box {
       @appy w-full h-full;
       filter: blur(1px);
-      
       box-shadow: 
         inset 0 0 0 1px var(--color-black), 
         inset 0 0 0 2px var(--color-electric-purple), 
@@ -85,10 +158,25 @@
         inset 0 0 0 4px var(--color-silver), 
         inset 0 0 0 5px var(--color-electric-purple);
     }
+    
   }
 }
 
 @layer base {
+  :root {
+    --px: var(--spacing-3, 12px);
+    --content-width: min(calc(100vw - 2 * var(--px)), var(--max-content-width));
+  }
+
+  a[href^="http"]:after {
+    content: " ↗";
+  }
+
+  /* Button override */
+  a[href^="http"].button:after {
+    content: "";
+  }
+
   body {
     text-rendering: geometricPrecision;
     -webkit-font-smoothing: antialiased; 
@@ -100,9 +188,14 @@
 
   body {
     @apply bg-lavender;
+    @apply text-base leading-tight tracking-[0.32px];
+   
+    @variant desktop {
+      @apply text-xl leading-[1.2] tracking-[0.4px];
+    }  
 
     & > * {
-      /* @apply max-w-(--max-content-width) w-full mx-auto; */
+      @apply max-w-(--content-width) w-full mx-auto;
     }
   }
 }

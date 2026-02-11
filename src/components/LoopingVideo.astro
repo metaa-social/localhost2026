@@ -7,25 +7,29 @@ const poster = await getImage({
   widths: [480, 720, 1080, 1920],
   sizes: `100vw`
 })
+
+const {class: className, ...props} = Astro.props;
 ---
 
-<media-controller gesturesdisabled nohotkeys class="block">
-  <img
-    slot="poster"
-    src={poster.src}
-    srcset={poster.srcSet.attribute}
-    alt="Slightly animating text thay says localhost:2026"
-    decoding="async" />
+<div class:list={["loopingVideo", "overflow-hidden", className]}>
+  <media-controller gesturesdisabled nohotkeys class="block aspect-video">
+    <img
+        slot="poster"
+        src={poster.src}
+        srcset={poster.srcSet.attribute}
+        alt="Slightly animating text thay says localhost:2026"
+        decoding="async" />
 
-  <hls-video
-    src="/banner/master.m3u8"
-    slot="media"
-    crossorigin
-    autoplay
-    loop
-    muted
-  ></hls-video>
-</media-controller>
+    <hls-video
+        src="/banner/master.m3u8"
+        slot="media"
+        crossorigin
+        autoplay
+        loop
+        muted
+        ></hls-video>
+  </media-controller>
+</div>
 
 <script>
   import "media-chrome";

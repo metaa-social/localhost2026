@@ -32,15 +32,18 @@ const places = defineCollection({
   }),
 });
 
-// const globals = defineCollection({
-//   loader: glob({ pattern: "**/*.md", base: "./src/content/globals" }),
-//   schema: z.object({
-//     slug: z.string(),
-//     name: z.string(),
-//     address: z.string().optional(),
-//     googleMaps: z.string().url().optional(),
-//     website: z.string().url().optional(),
-//   }),
-// })
+const globals = defineCollection({
+  loader: glob({ pattern: "**/*.md", base: "./src/content/globals" }),
+  schema: z.object({
+    slug: z.string(),
+    title: z.string(),
+    punchline: z.string(),
+    dateText: z.string(),
+    addressText: z.string(),
+    orgName: z.string(),
+    orgAbbrev: z.string(),
+    orgHref: z.string(),
+  }),
+})
 
-export const collections = { happenings, places };
+export const collections = { happenings, places, globals };

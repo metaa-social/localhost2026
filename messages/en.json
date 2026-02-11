@@ -1,4 +1,15 @@
 {
   "$schema": "https://inlang.com/schema/inlang-message-format",
-  "example_message": "Hello world {username}"
+  "example_message": "Hello world {username}",
+  "hosted_by": "Hosted by",
+  "btn_about": "About",
+  "btn_timetable": "Timetable",
+  "btn_speakers": "Speakers",
+  "btn_performances": "Performances",
+  "btn_workshops": "Workshops",
+  "btn_tickets": "Tickets",
+  "btn_metaa": "METAA",
+  "btn_partners": "Partners",
+  "btn_langToggle": "FR",
+  "btn_book": "Book Tickets"
 }
