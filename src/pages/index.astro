@@ -4,21 +4,98 @@ import LoopingVideo from "../components/LoopingVideo.astro";
 import Button from "../components/Button.astro";
 import Image from "../components/Image.astro";
 import Session from "../components/Session.astro";
+import Timetable from "../components/Timetable.astro";
 
 import * as m from "../paraglide/messages";
-import { getEntry } from "astro:content";
-import { getCollection } from "astro:content";
 
+import { getEntry, render, getCollection } from "astro:content";
+import { formatPrice } from "../utils/formatPrice";
 
 // const locale = Astro.currentLocale;
 const locale = "en";
 const globals = await getEntry("globals", locale);
-const { title, punchline, dateText, addressText, orgHref, orgName, orgAbbrev } =
-globals!.data;
+if (!globals) {
+  throw new Error("Globals data file missing");
+}
+const {
+  title,
+  punchline,
+  dateText,
+  addressText,
+  orgHref,
+  orgName,
+  orgAbbrev,
+  aboutTitle,
+  metaaAboutTitle,
+  metaaAboutHeading,
+  metaaAboutText,
+} = globals!.data;
 
-const speakers = await getCollection("happenings", ({data}) => {
-  return data.formats.includes("keynote")
+const { Content } = await render(globals);
+
+const speakers = await getCollection("happenings", ({ data }) => {
+  return data.formats.includes("keynote");
 });
+
+const performances = await getCollection("happenings", ({ data }) => {
+  return data.formats.includes("performance");
+});
+
+const workshops = await getCollection("happenings", ({ data }) => {
+  return data.formats.includes("workshop");
+});
+
+const amaretto = await getEntry("places", "amaretto");
+const pyxis = await getEntry("places", "pyxis");
+
+if (!amaretto || !pyxis) {
+  throw new Error("Places are missing");
+}
+
+const tickets = await getEntry("tickets", locale);
+if (!tickets) {
+  throw new Error("Tickets data missing");
+}
+
+const workshopTickets = tickets.data.tickets.filter(
+  (t) => t.type === "workshop",
+);
+
+const eventTickets = tickets.data.tickets.filter((t) => t.type === "event");
+const { Content: EventContent } = await render(tickets);
+
+const partners = await getEntry("partners", locale);
+if (!partners) {
+  throw new Error("Partners data missing");
+}
+
+const sponsorPartners = partners.data.partners.filter((p) =>
+  p.type.includes("sponsor"),
+);
+const supportPartners = partners.data.partners.filter((p) =>
+  p.type.includes("support"),
+);
+const regularPartners = partners.data.partners.filter((p) =>
+  p.type.includes("partner"),
+);
+const schoolPartners = partners.data.partners.filter((p) =>
+  p.type.includes("school"),
+);
+
+const {Content: PartnersContent} = await render(partners);
+
+const credits = await getEntry("credits", locale);
+if (!credits) {
+  throw new Error("Credits data missing");
+}
+
+const organizationCredits = credits.data.credits.filter(
+  (c) => c.type === "organization",
+);
+
+const identityCredits = credits.data.credits.filter(
+  (c) => c.type === "identity",
+);
 ---
 
 <Layout>
@@ -32,7 +109,7 @@ const speakers = await getCollection("happenings", ({data}) => {
     >
   </div>
 
-  <nav class:list={["nav"]}>
+  <nav class:list={["nav", "mt-3 mb-8 tablet:mb-12"]}>
     <Button href="#about" class="">{m.btn_about()}</Button>
     <Button href="#timetable" class="">{m.btn_timetable()}</Button>
     <Button href="#speakers" class="">{m.btn_speakers()}</Button>
@@ -47,13 +124,300 @@ const speakers = await getCollection("happenings", ({data}) => {
     >
   </nav>
 
-  <div class="divider"></div>
+    <div class="divider"></div>
+    <section id="about" class="section">
+      <h2 class="section__title heading mx-auto max-w-[26ch]">{aboutTitle}</h2>
+      <div class:list={["grid gap-y-lg", "tablet:grid-cols-2"]}>
+        <Image imagePath="about.png" alt="Synths closup" />
+        <div class="[&_p]:mb-[1em] [&_p]:last:mb-[2rem] flex flex-col">
+          <Content />
+          <div
+            class:list={[
+              "grid grid-cols-2 gap-x-sm gap-y-lg tablet:gap-4 justify-self-end mt-auto",
+            ]}
+          >
+            <div>{dateText}<br />{addressText}</div>
+            <div>{m.hosted_by()}<br /><a href={orgHref}>{orgAbbrev}</a></div>
+            <div>
+              {amaretto.data.name},<br /><a href={amaretto.data.googleMaps}
+                >{m.directions()}</a
+              >
+            </div>
+            <div>
+              {pyxis.data.name},<br /><a href={pyxis.data.googleMaps}
+                >{m.directions()}</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <section id="about"></section>
-  
-  <section id="speakers" class="section">
-    <h2 class="section__title heading">{m.btn_speakers()}</h2>
-    {speakers && speakers.map(({id}) => <Session id={id} />) }
+    <div class="divider"></div>
+    <section id="timetable" class="section">
+      <h2 class="section__title heading">{m.btn_timetable()}</h2>
+      <Timetable />
+    </section>
+
+    { speakers && speakers.map(({ id }, index) => { const first = index === 0;
+    const sectionId = first ? "speakers" : undefined; return (
+    <>
+      <div class="divider"></div>
+      <section class="section" id={sectionId}>
+        {first && <h2 class="section__title heading">{m.btn_speakers()}</h2>}
+        <Session id={id} />
+      </section>
+    </>
+    ); }) } { performances && performances.map(({ id }, index) => { const first =
+    index === 0; const sectionId = first ? "performances" : undefined; return (
+    <>
+      <div class="divider"></div>
+      <section class="section" id={sectionId}>
+        {
+          first && (
+            <h2 class="section__title heading">{m.btn_performances()}</h2>
+          )
+        }
+        <Session id={id} />
+      </section>
+    </>
+    ); }) } { workshops && workshops.map(({ id }, index) => { const first = index
+    === 0; const sectionId = first ? "workshops" : undefined; return (
+    <>
+      <div class="divider"></div>
+      <section class="section" id={sectionId}>
+        {first && <h2 class="section__title heading">{m.btn_workshops()}</h2>}
+        <Session id={id} />
+      </section>
+    </>
+    ); }) }
+    
+    <div class="divider"></div>
+    <section id="tickets" class="section">
+      <h2 class="section__title heading">{m.btn_tickets()}</h2>
+      <div class="grid grid-cols-1 tablet:grid-cols-3 gap-y-lg">
+        <div class="flex flex-col gap-y-lg">
+          <h4 class="text-h3 text-center">
+            {m.friday()}<br />{m.atAmaretto()}
+          </h4>
+          <div class="divider hidden tablet:block"></div>
+          <div class="text-h3 text-center">{m.freeTicket()}</div>
+        </div>
+
+        <div class="flex flex-col gap-y-lg">
+          <div class="divider block tablet:hidden"></div>
+          <h4 class="text-h3 text-center">
+            {m.fridayAndSunday()}<br />{m.workshopAtPyxis()}
+          </h4>
+          <div class="divider hidden tablet:block"></div>
+          <div
+            class="grid grid-cols-[1fr_auto] justify-between w-full gap-y-base leading-none"
+          >
+            {
+              workshopTickets &&
+                workshopTickets.map(({ label, price }) => (
+                  <>
+                    <span>{label}</span>
+                    <span class="text-right">
+                      <>
+                        <span class="tabular-nums">{price}</span>
+                        <span>.–</span>
+                      </>
+                    </span>
+                  </>
+                ))
+            }
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-y-lg">
+          <div class="divider block tablet:hidden"></div>
+          <h4 class="text-h3 text-center">
+            {m.saturday()}<br />{m.atAmaretto()}
+          </h4>
+          <div class="divider hidden tablet:block"></div>
+          <div
+            class="grid grid-cols-[1fr_auto] justify-between w-full gap-y-base leading-none"
+          >
+            {
+              eventTickets &&
+                eventTickets.map(({ label, price }) => (
+                  <>
+                    <span>{label}</span>
+                    <span class="text-right">
+                      <>
+                        <span class="tabular-nums">{price}</span>
+                        <span>.–</span>
+                      </>
+                    </span>
+                  </>
+                ))
+            }
+          </div>
+        </div>
+
+        <Button
+          href="https://google.com"
+          class="col-span-full button--primary mx-auto"
+        >
+          {m.btn_book()}
+        </Button>
+        <div
+          class="text-center [&_a]:underline col-span-full tablet:max-w-[60%] mx-auto"
+        >
+          <EventContent class="" />
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+    <section id="metaa" class="section">
+      <h2 class="section__title heading">{metaaAboutTitle}</h2>
+      <div
+        class:list={["grid gap-y-base tablet:gap-y-lg", "tablet:grid-cols-2"]}
+      >
+        <div class="text-xl tablet:text-[2rem] leading-[1.2]">
+          {metaaAboutHeading}
+        </div>
+        <div class="flex flex-col gap-y-base">
+          <div>{metaaAboutText}</div>
+          <Button href="https://metaa.ch">Website</Button>
+        </div>
+      </div>
+    </section>
+    <section class="section flex flex-col gap-y-[2rem] _mt-0 _tablet:mt-20">
+      <h4 class="text-xl leading-none text-center">{m.followUs()}</h4>
+      <div
+        class="flex flex-col tablet:flex-row tablet:gap-x-8 items-center justify-center text-h2"
+      >
+        <a
+          href="https://www.instagram.com/localhost_festival/"
+          class="after:content-['']">@localhost_festival</a
+        >
+        <a
+          href="https://www.instagram.com/metaa_social/"
+          class="after:content-['']">@metaa_social</a
+        >
+      </div>
+    </section>
+
+  <section id="partners" class="section">
+    <h2 class="section__title heading">{m.btn_partners()}</h2>
+    <div class="partners__main-grid grid grid-cols-1 tablet:grid-cols-2 gap-y-lg">
+      
+      <div class="partners__main-grid__sponsors grid grid-cols-1 gap-y-lg">
+        <div class="divider"></div>
+        <h4 class="text-h4 text-center">{m.partner_sponsor()}</h4>
+        <div class="grid grid-cols-1 tablet:grid-cols-2 tablet:justify-center justify-items-center gap-y-lg [&_img]:max-w-[150px] [&_img]:max-h-[100px] tablet:max-w-[35vw] tablet:-translate-x-[3%] tablet:mx-auto items-center">
+          {
+            sponsorPartners &&
+              sponsorPartners.map(({label, imagePath, href}) => (
+              <a href={href} class="after:content-['']">
+                <Image imagePath={imagePath} alt=`${label} logo` class="object-contain" />
+              </a>
+            ))
+          }
+        </div>
+      </div>
+      
+      <div class="partners__main-grid__support grid grid-cols-1 tablet:grid-rows-[auto_auto_1fr] gap-y-lg">
+        <div class="divider"></div>
+        <h4 class="text-h4 text-center ">{m.partner_support()}</h4>
+        <div class="justify-start grid grid-cols-1 tablet:grid-cols-1 tablet:justify-center justify-items-center gap-y-lg [&_img]:max-w-[400px] [&_img]:max-h-[400px] tablet:max-w-[60vw] tablet:mx-auto">
+          <a href="https://ecal.ch" class="after:content-[''] block my-8">
+              <Image imagePath="partners/ecal.svg" alt="ECAL logo" />
+          </a>
+
+        </div>
+      </div>
+      
+      <div class="partners__main-grid__partners grid grid-cols-1 gap-y-lg">
+        <div class="divider"></div>
+        <h4 class="text-h4 text-center">{m.partner_partner()}</h4>
+        <div class="grid grid-cols-2 gap-x-3 tablet:grid-cols-3 items-center justify-items-center gap-y-6 [&_img]:max-w-[100px] [&_img]:max-h-[30px] tablet:max-w-[60vw] tablet:mx-auto">
+          {
+            regularPartners &&
+              regularPartners.map(({label, imagePath, href}) => (
+              <a href={href} class="after:content-[''] block w-fit">
+                <Image imagePath={imagePath} alt=`${label} logo` class="block object-contain" />
+              </a>
+            ))
+          }
+        </div>
+      </div>
+      
+      <div class="partners__main-grid__schools grid grid-cols-1 gap-y-lg">
+        <div class="divider"></div>
+        <h4 class="text-h4 text-center">{m.partner_school()}</h4>
+        <div class="grid gap-x-3 grid-cols-2 tablet:grid-cols-2 tablet:justify-center justify-items-center _gap-y-lg max-w-[400px] mx-auto tablet:mx-auto">
+          <a href="https://ecal.ch" class="after:content-[''] block scale-50">
+              <Image imagePath="partners/ecal.svg" alt="ECAL logo" />
+          </a>
+          <a href="https://head-geneve.ch" class="after:content-['']">
+            <Image imagePath="partners/head.svg" alt="HEAD logo" />
+          </a>
+        </div>
+      </div>
+
+      <div class="text-center my-4 col-span-full mx-auto tablet:max-w-[65%] leading-[1.1] tablet:text-[2rem] tablet:mt-12 tablet:mb-8">
+        <PartnersContent />
+      </div>
+    </div>
   </section>
-
+    <div class="divider"></div>
+    <section
+      id="footer"
+      class="section grid grid-cols-1 gap-y-lg tablet:grid-cols-3 justify-start items-start"
+    >
+      <div
+        class="flex flex-col gap-y-base text-center justify-center items-center"
+      >
+        <h4 class="text-h3">{title}</h4>
+        <div>{dateText}<br />{addressText}</div>
+        <a href="https://metaa.ch" class="after:content-['']">
+          <Image imagePath="metaa.svg" alt="METAA logo" />
+        </a>
+      </div>
+      <div
+        class="flex flex-col gap-y-base text-center justify-center items-center"
+      >
+        <h4 class="text-h3">{m.organization()}</h4>
+        <div>
+          {
+            organizationCredits &&
+              organizationCredits.map(({ name }) => (
+                <span>
+                  {name}
+                  <br />
+                </span>
+              ))
+          }
+        </div>
+      </div>
+      <div
+        class="flex flex-col gap-y-base text-center justify-center items-center"
+      >
+        <h4 class="text-h3">{m.identity()}</h4>
+        <div>
+          {
+            identityCredits &&
+              identityCredits.map(({ name, role, href }) => (
+                <span>
+                  {role && <span>{role}: </span>}
+                  {href && (
+                    <a
+                      href={href}
+                      class="after:content-[''] whitespace-pre-line "
+                    >
+                      {name}
+                    </a>
+                  )}
+                  {!href && <span>{name}</span>}
+                  <br />
+                </span>
+              ))
+          }
+        </div>
+      </div>
+    </section>
 </Layout>

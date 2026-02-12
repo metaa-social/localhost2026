@@ -43,6 +43,7 @@
 }
 
 @utility gap-x-* {
+  gap-x: var(--gap-x-sm);
   row-column: --value(--gap-x-*);
 }
 
@@ -50,9 +51,21 @@
   row-gap: --value(--gap-y-*);
 }
 
+@utility text-h3 {
+  @apply text-2xl leading-[1.16] tablet:text-[2rem];
+}
+
+@utility text-h4 {
+  @apply text-xl;
+}
+
+@utility text-h2 {
+  @apply text-[2rem] tablet:text-[3rem];
+}
+
 @layer components {
   .heading {
-    @apply text-[2rem] desktop:text-[3rem];
+    @apply text-[2rem] tablet:text-[3rem];
     @apply leading-none;
     @apply py-4 desktop:py-8;
     @apply text-center;
@@ -61,12 +74,54 @@
   .section {
     @apply flex flex-col;
     @apply gap-x-base;
-    @apply pt-(--gap-y-lg);
+    @apply pt-(--gap-y-lg) tablet:pt-8;
     @apply pb-(--gap-y-lg);
     
     &:has(.section__title) {
       @apply pt-(--gap-y-base);
     }
+  }
+
+  .timetable {
+    @apply grid grid-cols-1 tablet:grid-cols-3;
+    @apply gap-x-(--gap-x-base);
+
+    & .timetable__day {
+      & .timetable__day__image {
+        @apply max-w-47.5 max-h-[145px] mx-auto;
+        @apply object-contain;
+        @apply mt-(--gap-y-base) tablet:mt-0;
+        @apply first:mt-0;
+      }
+
+      & .timetable__day__title {
+          @apply text-h3 text-center leading-none;
+          @apply py-(--gap-y-sm);
+      }
+
+      & .timetable__block {
+        @apply py-(--gap-y-base);
+        @apply flex flex-col;
+        @apply gap-y-base;
+        
+        & .timetable__block__title {
+          @apply text-h3 text-center leading-none;
+        }
+
+        & .timetable__block__items {
+          @apply flex flex-col gap-y-sm leading-none;
+
+          & .timetable__block__item {
+            @apply leading-none;
+            @apply tabular-nums; 
+            @apply flex flex-row;
+            @apply gap-x-base;
+          }
+        }
+      }
+    }
+
+
   }
 
   .session {
@@ -157,25 +212,34 @@
   }
 
   .pageHeader {
-    @apply grid grid-cols-2;
+    @apply mt-[18px] tablet:mt-8;
+    @apply grid grid-cols-2 gap-3 tablet:gap-8 tablet:grid-cols-[auto_auto_1fr_auto_auto];
 
     & .pageHeader__title {
       @apply col-span-full desktop:col-span-1;
+      @apply not-tablet:leading-none;
+      @apply tablet:order-1;
     }
 
     & .pageHeader__punchline {
       @apply col-span-full desktop:col-span-1;
+      @apply tablet:order-2;
     }
 
     & .pageHeader__video {
       @apply col-span-full;
+      @apply tablet:order-5;
+      
     }
 
     & .pageHeader__datetime {
+      @apply tablet:order-3;
+      @apply tablet:col-start-4;
       
     }
     
     & .pageHeader__org {
+      @apply tablet:order-4;
 
     }
 
@@ -191,6 +255,8 @@
 
     & .nav__action-button {
       @apply fixed bottom-4 right-4;
+      @apply z-10;
+      @apply ml-auto;
       @apply desktop:static; 
     }
   }
@@ -198,7 +264,7 @@
 
   .loopingVideo {
     @apply flex items-center justify-center;
-    @apply aspect-715/518 desktop:aspect-1540/508;
+    @apply aspect-715/518 tablet:aspect-1540/508;
 
     & > media-controller {
       @apply w-full h-fit;
@@ -206,8 +272,8 @@
   }
 
   .button {
-    @apply text-base desktop:text-xl; 
-    @apply tracking-[0.02em] desktop:tracking-[0.025em];
+    @apply text-base tablet:text-xl; 
+    @apply tracking-[0.02em] tablet:tracking-[0.025em];
     @apply leading-none;
 
     /* default is secondary  */
@@ -255,13 +321,14 @@
     
     & > .button__border-box {
       @appy w-full h-full;
-      filter: blur(1px);
+      filter: blur(0.6px);
       box-shadow: 
-        inset 0 0 0 1px var(--color-black), 
+        inset 0 0 0 1px var(--color-silver), 
         inset 0 0 0 2px var(--color-electric-purple), 
-        inset 0 0 0 3px var(--color-spring-green), 
-        inset 0 0 0 4px var(--color-silver), 
-        inset 0 0 0 5px var(--color-electric-purple);
+        inset 0 0 0 3px var(--color-silver), 
+        inset 0 0 0 4px var(--color-spring-green), 
+        inset 0 0 0 5px var(--color-electric-purple),
+        inset 0 0 0 6px var(--color-black);
     }
     
   }
@@ -269,11 +336,15 @@
 
 @layer base {
   :root {
-    --px: var(--spacing-3, 12px);
-    --content-width: min(calc(100vw - 2 * var(--px)), var(--max-content-width));
+    --px: calc(0.75rem);
+    --content-width: min(calc(100svw - var(--px) * 2), var(--max-content-width));
+    
+    @variant tablet {
+      --px: calc(2rem);
+    }  
   
-    --gap-x-base: 0.5rem;
-    --gap-y-base: 0.5rem;
+    /* --gap-x-base: 0.5rem; */
+    /* --gap-y-base: 0.5rem; */
   }
 
   a[href^="http"]:after {
@@ -298,7 +369,7 @@
     @apply bg-lavender;
     @apply text-base leading-tight tracking-[0.32px];
    
-    @variant desktop {
+    @variant tablet {
       @apply text-xl leading-[1.2] tracking-[0.4px];
     }  
 

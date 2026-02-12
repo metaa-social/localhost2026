@@ -1,0 +1,49 @@
+---
+import { getEntry } from "astro:content";
+import { getCollection } from "astro:content";
+import Image from "./Image.astro";
+import TimetableBlock from "./TimetableBlock.astro";
+
+import * as m from "../paraglide/messages";
+
+const locale = Astro.currentLocale;
+
+import { isFriday, isSaturday, isSunday } from "../utils/time";
+const timetable = await getEntry("timetable", locale);
+
+const timetableFridayPyxis = timetable!.data.items.filter(
+  (e) => isFriday(e.datetime) && e.place.id === "pyxis",
+);
+const timetableFridayAmaretto = timetable!.data.items.filter(
+  (e) => isFriday(e.datetime) && e.place.id === "amaretto",
+);
+const timetableSaturday = timetable!.data.items.filter((e) =>
+  isSaturday(e.datetime),
+);
+const timetableSunday = timetable!.data.items.filter((e) => isSunday(e.datetime));
+---
+
+<div class="timetable">
+  <div class="timetable__day">
+    <Image imagePath="20.png" alt="Friday" class="timetable__day__image" />
+    <h3 class="timetable__day__title">Friday</h3>
+    <div class="divider"></div>
+    <TimetableBlock items={timetableFridayPyxis} />
+    <div class="divider"></div>
+    <TimetableBlock items={timetableFridayAmaretto} />
+  </div>
+  <div class="timetable__day">
+    <div class="divider tablet:hidden"></div>
+    <Image imagePath="21.png" alt="Saturday" class="timetable__day__image "/>
+    <h3 class="timetable__day__title">Saturday</h3>
+    <div class="divider"></div>
+    <TimetableBlock items={timetableSaturday} />
+  </div>
+  <div class="timetable__day">
+    <div class="divider tablet:hidden"></div>
+    <Image imagePath="22.png" alt="Sunday" class="timetable__day__image" />
+    <h3 class="timetable__day__title">Sunday</h3>
+    <div class="divider"></div>
+    <TimetableBlock items={timetableSunday} />
+  </div>
+</div>

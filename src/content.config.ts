@@ -39,13 +39,83 @@ const globals = defineCollection({
   schema: z.object({
     slug: z.string(),
     title: z.string(),
+    aboutTitle: z.string(),
     punchline: z.string(),
     dateText: z.string(),
     addressText: z.string(),
     orgName: z.string(),
     orgAbbrev: z.string(),
     orgHref: z.string(),
+    metaaAboutTitle: z.string(),
+    metaaAboutHeading: z.string(),
+    metaaAboutText: z.string(),
   }),
-})
+});
 
-export const collections = { happenings, places, globals };
+const timetable = defineCollection({
+  loader: glob({ pattern: "**/*.md", base: "./src/content/timetable" }),
+  schema: z.object({
+    slug: z.string(),
+    items: z.array(
+      z.object({
+        datetime: z.date(),
+        place: reference("places"),
+        label: z.string(),
+      }),
+    ),
+  }),
+});
+
+const tickets = defineCollection({
+  loader: glob({ pattern: "**/*.md", base: "./src/content/tickets" }),
+  schema: z.object({
+    slug: z.string(),
+    tickets: z.array(
+      z.object({
+        label: z.string(),
+        price: z.number(),
+        type: z.enum(["workshop", "event"]),
+      }),
+    ),
+  }),
+});
+
+const partners = defineCollection({
+  loader: glob({ pattern: "**/*.md", base: "./src/content/partners" }),
+  schema: z.object({
+    slug: z.string(),
+    partners: z.array(
+      z.object({
+        label: z.string(),
+        imagePath: z.string(),
+        href: z.string().url().optional(),
+        type: z.array(z.enum(["sponsor", "support", "partner", "school"])),
+      }),
+    ),
+  }),
+});
+
+const credits = defineCollection({
+  loader: glob({ pattern: "**/*.md", base: "./src/content/credits" }),
+  schema: z.object({
+    slug: z.string(),
+    credits: z.array(
+      z.object({
+        name: z.string(),
+        type: z.enum(["organization", "identity"]),
+        role: z.string().optional(),
+        href: z.string().url().optional(),
+      }),
+    ),
+  }),
+});
+
+export const collections = {
+  happenings,
+  places,
+  globals,
+  timetable,
+  tickets,
+  partners,
+  credits,
+};

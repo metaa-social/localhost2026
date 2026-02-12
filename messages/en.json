@@ -17,5 +17,20 @@
   "format_keynote": "Keynote",
   "format_qa": "Q&A",
   "format_performance": "Performance",
-  "format_workshop": "Workshop"
+  "format_workshop": "Workshop",
+  "directions": "Directions",
+  "followUs": "Follow us",
+  "friday": "Friday",
+  "saturday": "Saturday",
+  "fridayAndSunday": "Friday & Sunday",
+  "sunday": "Sunday",
+  "atAmaretto": "at Espace Amaretto",
+  "workshopAtPyxis": "Workshops at Pyxis",
+  "freeTicket": "Free Ticket",
+  "partner_sponsor": "Funding Sponsors",
+  "partner_support": "Supporting Partner",
+  "partner_partner": "Partners",
+  "partner_school": "School Partners",
+  "organization": "Organization",
+  "identity": "Identity & Website"
 }
