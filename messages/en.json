@@ -11,5 +11,11 @@
   "btn_metaa": "METAA",
   "btn_partners": "Partners",
   "btn_langToggle": "FR",
-  "btn_book": "Book Tickets"
+  "btn_book": "Book Tickets",
+  "instagram": "instagram",
+  "website": "website",
+  "format_keynote": "Keynote",
+  "format_qa": "Q&A",
+  "format_performance": "Performance",
+  "format_workshop": "Workshop"
 }

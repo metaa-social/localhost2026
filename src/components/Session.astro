@@ -1,0 +1,54 @@
+---
+import { getEntry, render } from "astro:content";
+import Image from "./Image.astro";
+import * as m from "../paraglide/messages";
+import {formatDateTime} from "../utils/formatDateTime";
+
+const {id} = Astro.props;
+
+const entry = await getEntry("happenings", id);
+if (!entry) {
+  throw new Error('Could not find entry with id ' + id);
+}
+const { Content } = await render(entry);
+const {name, imagePath, titleImagePath, instagram, website, place, datetime, happeningLang: lang, formats} = entry.data;
+const placeEntry = await getEntry(place);
+const formattedDateTime = formatDateTime(datetime);
+
+const formatsString = formats.map(format => m[`format_${format}`]()).join(", ");
+const socials = []; 
+
+if (website) {
+  socials.push({label: "website", href: website});
+}
+
+if (instagram) {
+  socials.push({label: "instagram", href: instagram});
+}
+---
+
+<div class:list={["session"]}>
+  <div class="session__header tablet:contents">
+  <Image imagePath={imagePath} alt={name} class="session__image"/>
+  <Image imagePath={titleImagePath} alt={name} class="session__title-image mb-(--gap-y-sm) desktop:mb-0" />
+  <div class="session__info flex">
+    <div class="session__info__format">
+      <span>{formatsString}</span>
+      <span>({lang.toUpperCase()})</span>
+    </div>
+    <div class="separator"></div>
+    <div class="session__info__datetime">{formattedDateTime}</div>
+    <div class="separator"></div>
+    <div class="session__info__place">{placeEntry.data.name}</div>
+  </div>
+  </div>
+  <div class="session__body"><Content/></div>
+    <div class="session__socials">
+      {socials && socials.map(({label, href}, index) => (
+      <>
+      <a href={href}>{m[label]()}</a>
+      { index < socials.length - 1 && <div class="separator"></div>}
+      </>
+      ))}
+    </div>
+</div>

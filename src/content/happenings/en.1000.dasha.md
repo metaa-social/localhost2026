@@ -3,10 +3,12 @@ lang: en
 happeningLang: en
 name: Dasha Ilina
 punchline: Technocritical artist
+imagePath: happenings/dasha.png 
+titleImagePath: happenings/dasha-title.png 
 website: https://dashailina.com/
 instagram: https://www.instagram.com/dashesandcommas/?hl=en
-datetime: 2026-02-10T18:30:00
-format: ["keynote", "qa"]
+datetime: 2026-03-21T15:45:00
+formats: ["keynote", "qa"]
 place: amaretto
 ---
 

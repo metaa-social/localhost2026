@@ -2,14 +2,23 @@
 import Layout from "../layouts/Layout.astro";
 import LoopingVideo from "../components/LoopingVideo.astro";
 import Button from "../components/Button.astro";
+import Image from "../components/Image.astro";
+import Session from "../components/Session.astro";
+
 import * as m from "../paraglide/messages";
 import { getEntry } from "astro:content";
+import { getCollection } from "astro:content";
+
 
 // const locale = Astro.currentLocale;
 const locale = "en";
 const globals = await getEntry("globals", locale);
 const { title, punchline, dateText, addressText, orgHref, orgName, orgAbbrev } =
-  globals!.data;
+globals!.data;
+
+const speakers = await getCollection("happenings", ({data}) => {
+  return data.formats.includes("keynote")
+});
 ---
 
 <Layout>
@@ -41,4 +50,10 @@ const { title, punchline, dateText, addressText, orgHref, orgName, orgAbbrev } =
   <div class="divider"></div>
 
   <section id="about"></section>
+  
+  <section id="speakers" class="section">
+    <h2 class="section__title heading">{m.btn_speakers()}</h2>
+    {speakers && speakers.map(({id}) => <Session id={id} />) }
+  </section>
+
 </Layout>

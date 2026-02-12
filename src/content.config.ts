@@ -13,7 +13,9 @@ const happenings = defineCollection({
     happeningLang: z.enum(["en", "fr"]),
     name: z.string(),
     punchline: z.string().optional(),
-    format: z.union([z.enum(formats), z.array(z.enum(formats))]), // single or multiple
+    imagePath: z.string(),
+    titleImagePath: z.string(),
+    formats: z.array(z.enum(formats)),
     datetime: z.date(),
     place: reference("places"),
     website: z.string().url().optional(),
