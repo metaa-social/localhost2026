@@ -8,6 +8,8 @@
 }
 
 @theme {
+  --text-xl--line-height: 1.1;
+
   --font-sans: "Gerrit";
   --color-brand: #b09ce3;
 
@@ -83,7 +85,9 @@
   }
 
   .timetable {
-    @apply grid grid-cols-1 tablet:grid-cols-3;
+    @apply grid grid-cols-1 desktop:grid-cols-3;
+    @apply tablet:max-w-[500px] tablet:mx-auto desktop:max-w-full desktop:mx-0;
+
     @apply gap-x-(--gap-x-base);
 
     & .timetable__day {
@@ -138,7 +142,7 @@
     & .session__image, & .session__title-image {
       @apply tablet:w-full;
       @apply mx-auto;
-      @apply bg-yellow-50;
+      /* @apply bg-yellow-50; */
     }
     
     & .session__image {
@@ -204,6 +208,7 @@
     inset 0 0 0 3px var(--color-silver), 
     inset 0 0 0 4px var(--color-spring-green), 
     inset 0 0 0 5px var(--color-electric-purple);
+    
     filter: blur(1px);
   }
 
@@ -285,6 +290,8 @@
     --btn-text-active: var(--color-black);
 
     & > .button__content {
+      /* @apply rounded-2xl; */
+    @apply m-[2px];
       @apply p-3; 
       @apply transition-colors duration-base;
       background-color: var(--btn-bg);
@@ -321,7 +328,7 @@
     
     & > .button__border-box {
       @appy w-full h-full;
-      filter: blur(0.6px);
+      filter: blur(0.7px);
       box-shadow: 
         inset 0 0 0 1px var(--color-silver), 
         inset 0 0 0 2px var(--color-electric-purple), 
@@ -338,7 +345,8 @@
   :root {
     --px: calc(0.75rem);
     --content-width: min(calc(100svw - var(--px) * 2), var(--max-content-width));
-    
+   
+
     @variant tablet {
       --px: calc(2rem);
     }  
@@ -356,6 +364,10 @@
     content: "";
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     text-rendering: geometricPrecision;
     -webkit-font-smoothing: antialiased; 
@@ -367,10 +379,10 @@
 
   body {
     @apply bg-lavender;
-    @apply text-base leading-tight tracking-[0.32px];
+    @apply text-base leading-[1.2] tracking-[0.32px];
    
     @variant tablet {
-      @apply text-xl leading-[1.2] tracking-[0.4px];
+      @apply text-xl leading-[1.1] tracking-[0.4px];
     }  
 
     & > * {

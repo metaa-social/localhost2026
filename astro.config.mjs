@@ -6,6 +6,9 @@ import { paraglideVitePlugin } from "@inlang/paraglide-js";
 
 // https://astro.build/config
 export default defineConfig({
+  server: {
+    allowedHosts: true,
+  },
   i18n: {
     locales: ["en", "fr"],
     defaultLocale: "en",

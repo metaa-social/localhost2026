@@ -28,19 +28,20 @@ const timetableSunday = timetable!.data.items.filter((e) => isSunday(e.datetime)
     <Image imagePath="20.png" alt="Friday" class="timetable__day__image" />
     <h3 class="timetable__day__title">Friday</h3>
     <div class="divider"></div>
-    <TimetableBlock items={timetableFridayPyxis} />
+    <TimetableBlock items={timetableFridayPyxis} class="tablet:mb-8" />
+
     <div class="divider"></div>
     <TimetableBlock items={timetableFridayAmaretto} />
   </div>
   <div class="timetable__day">
-    <div class="divider tablet:hidden"></div>
+    <div class="divider desktop:hidden"></div>
     <Image imagePath="21.png" alt="Saturday" class="timetable__day__image "/>
     <h3 class="timetable__day__title">Saturday</h3>
     <div class="divider"></div>
     <TimetableBlock items={timetableSaturday} />
   </div>
   <div class="timetable__day">
-    <div class="divider tablet:hidden"></div>
+    <div class="divider desktop:hidden"></div>
     <Image imagePath="22.png" alt="Sunday" class="timetable__day__image" />
     <h3 class="timetable__day__title">Sunday</h3>
     <div class="divider"></div>

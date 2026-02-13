@@ -109,7 +109,7 @@ const identityCredits = credits.data.credits.filter(
     >
   </div>
 
-  <nav class:list={["nav", "mt-3 mb-8 tablet:mb-12"]}>
+  <nav class:list={["nav", "mt-3 mb-8 tablet:mb-12", "static", "tablet:sticky z-10 top-4"]}>
     <Button href="#about" class="">{m.btn_about()}</Button>
     <Button href="#timetable" class="">{m.btn_timetable()}</Button>
     <Button href="#speakers" class="">{m.btn_speakers()}</Button>
@@ -276,7 +276,7 @@ const identityCredits = credits.data.credits.filter(
       <div
         class:list={["grid gap-y-base tablet:gap-y-lg", "tablet:grid-cols-2"]}
       >
-        <div class="text-xl tablet:text-[2rem] leading-[1.2]">
+        <div class="text-xl tablet:text-[2rem] ">
           {metaaAboutHeading}
         </div>
         <div class="flex flex-col gap-y-base">
@@ -301,6 +301,7 @@ const identityCredits = credits.data.credits.filter(
       </div>
     </section>
 
+  <div class="divider"></div>
   <section id="partners" class="section">
     <h2 class="section__title heading">{m.btn_partners()}</h2>
     <div class="partners__main-grid grid grid-cols-1 tablet:grid-cols-2 gap-y-lg">

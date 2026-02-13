@@ -2,7 +2,7 @@
 import { getEntry } from "astro:content";
 import formatTime from "../utils/formatTime";
 
-const { items } = Astro.props;
+const { items, class: className} = Astro.props;
 
 const place = items.at(0).place;
 
@@ -10,7 +10,7 @@ const placeEntry = await getEntry(place);
 const { name } = placeEntry.data;
 ---
 
-<div class="timetable__block">
+<div class:list={["timetable__block", className]}>
   <h4 class="timetable__block__title">{name}</h4>
   <div class="timetable__block__items">
   {
