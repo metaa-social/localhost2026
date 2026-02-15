@@ -8,6 +8,8 @@ titleImagePath: happenings/fuzzy-title.png
 datetime: 2026-03-21T23:15:00
 formats: ["performance"]
 place: amaretto
+website: https://www.mynameisfuzzy.ch/
+instagram: https://www.instagram.com/mynameisfuzzy_/?hl=en
 ---
 
-DJ/VJ performance set.
+My name is Fuzzy stages its pop songs through sound, visual, and interactive installations. In contrast to online music that is accessible anywhere and at any time, the audience only discovers the songs by visiting the installations.

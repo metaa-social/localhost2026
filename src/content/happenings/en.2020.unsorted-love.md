@@ -8,6 +8,8 @@ titleImagePath: happenings/unsorted-title.png
 datetime: 2026-03-20T19:30:00
 formats: ["performance"]
 place: amaretto
+website: https://unsorted.love/
+instagram: https://www.instagram.com/unsorted.love/
 ---
 
 unsorted is a Zurich-based creative collective and physical space located at Josefstrasse 206.

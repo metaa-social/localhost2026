@@ -20,6 +20,8 @@ const happenings = defineCollection({
     place: reference("places"),
     website: z.string().url().optional(),
     instagram: z.string().url().optional(),
+    website2: z.string().url().optional(),
+    instagram2: z.string().url().optional(),
   }),
 });
 

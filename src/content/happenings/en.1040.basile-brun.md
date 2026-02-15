@@ -7,6 +7,8 @@ titleImagePath: happenings/basil-brun-title.png
 datetime: 2026-03-21T14:30:00
 formats: ["keynote"]
 place: amaretto
+instagram: https://www.instagram.com/chap0ng
+website: https://poesie-soft.xyz/
 ---
 
 Basile Brun is an artist, composer, and interaction designer with a Bachelor in Fine Arts and Master in Interaction Media Design from HEAD – Geneva.

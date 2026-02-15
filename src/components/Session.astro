@@ -11,7 +11,7 @@ if (!entry) {
   throw new Error('Could not find entry with id ' + id);
 }
 const { Content } = await render(entry);
-const {name, imagePath, titleImagePath, instagram, website, place, datetime, happeningLang: lang, formats} = entry.data;
+const {name, imagePath, titleImagePath, instagram, website, instagram2, website2, place, datetime, happeningLang: lang, formats} = entry.data;
 const placeEntry = await getEntry(place);
 const formattedDateTime = formatDateTime(datetime);
 
@@ -24,6 +24,14 @@ if (website) {
 
 if (instagram) {
   socials.push({label: "instagram", href: instagram});
+}
+
+if (website2) {
+  socials.push({label: "website", href: website2});
+}
+
+if (instagram2) {
+  socials.push({label: "instagram", href: instagram2});
 }
 ---
 

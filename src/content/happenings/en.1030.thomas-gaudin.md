@@ -8,6 +8,8 @@ titleImagePath: happenings/thomas-title.png
 datetime: 2026-03-21T13:15:00
 formats: ["keynote"]
 place: amaretto
+instagram: https://www.instagram.com/thomas.obj/
+website: https://thomasgaudin.xyz/
 ---
 
 Thomas Gaudin is a digital artist and designer exploring the relationship between humans and technology through interactive and algorithmic systems. His work investigates how digital environments influence perception and behavior.
