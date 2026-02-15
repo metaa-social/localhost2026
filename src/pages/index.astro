@@ -33,17 +33,17 @@ const {
 
 const { Content } = await render(globals);
 
-const speakers = await getCollection("happenings", ({ data }) => {
+const speakers = (await getCollection("happenings", ({ data }) => {
   return data.formats.includes("keynote");
-});
+})).sort((a, b) => a.id.localeCompare(b.id));
 
-const performances = await getCollection("happenings", ({ data }) => {
+const performances = (await getCollection("happenings", ({ data }) => {
   return data.formats.includes("performance");
-});
+})).sort((a, b) => a.id.localeCompare(b.id));
 
-const workshops = await getCollection("happenings", ({ data }) => {
+const workshops = (await getCollection("happenings", ({ data }) => {
   return data.formats.includes("workshop");
-});
+})).sort((a, b) => a.id.localeCompare(b.id));
 
 const amaretto = await getEntry("places", "amaretto");
 const pyxis = await getEntry("places", "pyxis");
