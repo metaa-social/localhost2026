@@ -41,6 +41,7 @@ const globals = defineCollection({
   schema: z.object({
     slug: z.string(),
     title: z.string(),
+    description: z.string(),
     aboutTitle: z.string(),
     punchline: z.string(),
     dateText: z.string(),

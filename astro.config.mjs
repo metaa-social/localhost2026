@@ -6,6 +6,7 @@ import { paraglideVitePlugin } from "@inlang/paraglide-js";
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://www.localhost-festival.ch",
   server: {
     allowedHosts: true,
   },

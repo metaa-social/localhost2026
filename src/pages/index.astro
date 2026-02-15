@@ -29,6 +29,7 @@ const {
   metaaAboutTitle,
   metaaAboutHeading,
   metaaAboutText,
+  description,
 } = globals!.data;
 
 const { Content } = await render(globals);
@@ -98,7 +99,7 @@ const identityCredits = credits.data.credits.filter(
 );
 ---
 
-<Layout>
+<Layout title={title} description={description}>
   <div class:list={["pageHeader"]}>
     <span class="pageHeader__title">{title}</span>
     <span class="pageHeader__punchline">{punchline}</span>
