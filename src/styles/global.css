@@ -4,7 +4,7 @@
   font-family: Gerrit;
   font-style: normal;
   font-display: block;
-  src: url("./gerrit.woff2") format("woff2");
+  src: url("/gerrit.woff2") format("woff2");
 }
 
 @theme {
