@@ -1,11 +1,5 @@
 ---
-import Layout from "../../layouts/Layout.astro"
-import * as m from "../../paraglide/messages";
-import { setLocale } from "../../paraglide/runtime";
-
-setLocale("fr");
+import Index from "../index.astro";
 ---
 
-<Layout>
-  <h1>Astro {m.example_message({username: "Tibor"})}</h1>
-</Layout>
+<Index />

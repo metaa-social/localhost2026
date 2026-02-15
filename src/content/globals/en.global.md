@@ -14,6 +14,7 @@ metaaAboutTitle: About METAA
 metaaAboutHeading: METAA is a non-profit Swiss association dedicated to promoting experimental artistic and digital practices. It supports emerging creators by highlighting projects that address issues related to technology.
 metaaAboutText: Since 2020, the Release Candidate Award has recognized the most daring graduation projects from the Media & Interaction Design (ECAL) and Media Design (HEAD) programs. This award provides the winners with professional exposure during an annual private event , a key gathering for the METAA community. With localhost:2025 , the association expands this celebration to the public, sharing these critical insights and emerging talents with a broader audience.
 partnersText: localhost could not exist without our partners, METAA members and volunteers who contributed to make this event what it is.
+ticketsHref: https://infomaniak.events/fr-ch/conferences/localhost2026/99766be8-70a2-4773-a185-6f43bdb62e46/event/1614411
 ---
 
 Organized by the METAA (Media Experiments in Technology and Art Association), localhost:2026 is a public event celebrating experimental artistic practices connected to emerging technologies.  

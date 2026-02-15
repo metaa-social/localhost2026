@@ -52,6 +52,7 @@ const globals = defineCollection({
     metaaAboutTitle: z.string(),
     metaaAboutHeading: z.string(),
     metaaAboutText: z.string(),
+    ticketsHref: z.string(),
   }),
 });
 

@@ -11,8 +11,7 @@ import * as m from "../paraglide/messages";
 import { getEntry, render, getCollection } from "astro:content";
 import { formatPrice } from "../utils/formatPrice";
 
-// const locale = Astro.currentLocale;
-const locale = "en";
+const locale = Astro.currentLocale as "en" | "fr";
 const globals = await getEntry("globals", locale);
 if (!globals) {
   throw new Error("Globals data file missing");
@@ -119,8 +118,8 @@ const identityCredits = credits.data.credits.filter(
     <Button href="#tickets" class="">{m.btn_tickets()}</Button>
     <Button href="#metaa" class="">{m.btn_metaa()}</Button>
     <Button href="#partners" class="">{m.btn_partners()}</Button>
-    <Button href="/fr" class="">{m.btn_langToggle()}</Button>
-    <Button href="https://google.com" class="nav__action-button button--primary"
+    <Button href={m.btn_langToggleHref()} class="">{m.btn_langToggle()}</Button>
+    <Button href={globals.data.ticketsHref} class="nav__action-button button--primary"
       >{m.btn_book()}</Button
     >
   </nav>
