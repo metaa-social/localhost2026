@@ -206,6 +206,32 @@ const identityCredits = credits.data.credits.filter(
           <div class="divider hidden tablet:block"></div>
           <div class="text-h3 text-center">{m.freeTicket()}</div>
         </div>
+        
+        <div class="flex flex-col gap-y-lg">
+          <div class="divider block tablet:hidden"></div>
+          <h4 class="text-h3 text-center">
+            {m.saturday()}<br />{m.atAmaretto()}
+          </h4>
+          <div class="divider hidden tablet:block"></div>
+          <div
+            class="grid grid-cols-[1fr_auto] justify-between w-full gap-y-base leading-none"
+          >
+            {
+              eventTickets &&
+                eventTickets.map(({ label, price }) => (
+                  <>
+                    <span>{label}</span>
+                    <span class="text-right">
+                      <>
+                        <span class="tabular-nums">{price}</span>
+                        <span>.–</span>
+                      </>
+                    </span>
+                  </>
+                ))
+            }
+          </div>
+        </div>
 
         <div class="flex flex-col gap-y-lg">
           <div class="divider block tablet:hidden"></div>
@@ -233,31 +259,6 @@ const identityCredits = credits.data.credits.filter(
           </div>
         </div>
 
-        <div class="flex flex-col gap-y-lg">
-          <div class="divider block tablet:hidden"></div>
-          <h4 class="text-h3 text-center">
-            {m.saturday()}<br />{m.atAmaretto()}
-          </h4>
-          <div class="divider hidden tablet:block"></div>
-          <div
-            class="grid grid-cols-[1fr_auto] justify-between w-full gap-y-base leading-none"
-          >
-            {
-              eventTickets &&
-                eventTickets.map(({ label, price }) => (
-                  <>
-                    <span>{label}</span>
-                    <span class="text-right">
-                      <>
-                        <span class="tabular-nums">{price}</span>
-                        <span>.–</span>
-                      </>
-                    </span>
-                  </>
-                ))
-            }
-          </div>
-        </div>
 
         <Button
           href="https://google.com"

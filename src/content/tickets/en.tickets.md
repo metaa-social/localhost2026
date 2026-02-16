@@ -1,25 +1,25 @@
 ---
 slug: en
 tickets:
-  - label: Full fare
+  - label: Workshop Session
     price: 40
     type: workshop
-  - label: METAA Members
-    price: 40
+  - label: Workshop (Reduced*)
+    price: 20
     type: workshop
-  - label: Reduced*
-    price: 40
+  - label: Workshop (METAA Members)
+    price: 30
     type: workshop
-  - label: ECAL/HEAD Students
-    price: 40
+  - label: Workshop (ECAL/HEAD Students)
+    price: 10
     type: workshop
-  - label: Full pass + 1 Drink on Friday
-    price: 40
-    type: event
-  - label: Reduced*
+  - label: Saturday pass
     price: 50
     type: event
-  - label: Party pass
+  - label: Saturday pass (Reduced*)
+    price: 40
+    type: event
+  - label: Party Only (Performances & DJ/VJ)
     price: 15
     type: event
   - label: Supporter pass
