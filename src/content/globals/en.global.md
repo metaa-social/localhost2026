@@ -1,7 +1,7 @@
 ---
 slug: en
 title: localhost:2026
-description: A METAA association event on digital arts and experimental tech at Espace Amaretto & Pyxis. Talks, workshops and shows by 2girls1comp, Dasha Ilina & METAA winners. Lausanne 20–22.03.2026 
+description: A METAA association event on digital arts and experimental tech at Espace Amaretto & Pyxis. Talks, workshops and performances. Lausanne 20–22.03.2026 
 punchline: Festival for experimental media art and digital cultures
 dateText: 20→22.03.2026
 addressText: Lausanne, CH
