@@ -1,9 +1,33 @@
 import { defineCollection, reference } from "astro:content";
 import { glob } from "astro/loaders";
-
+import { Temporal } from '@js-temporal/polyfill'
 import { z } from "astro/zod";
 
-const datetime = z.string().datetime({ local: true });
+const SwissDateSchema = z.preprocess((val) => {
+  // If Astro already turned it into a Date, we need to extract the "wall time"
+  // and re-interpret it as Europe/Zurich
+  if (val instanceof Date) {
+    // .toISOString() gives '2026-02-16T15:00:00.000Z'
+    // We strip the 'Z' to treat it as a PlainDateTime (local time)
+    val = val.toISOString().replace('Z', '');
+  }
+
+  if (typeof val !== "string") return val;
+
+  try {
+    // 1. Parse the string as a "Plain" time (no timezone/offset)
+    const plain = Temporal.PlainDateTime.from(val);
+
+    // 2. Explicitly attach the Swiss timezone
+    const zoned = plain.toZonedDateTime("Europe/Zurich");
+
+    // 3. Return a Date object with the correct epoch (UTC) 
+    return new Date(zoned.epochMilliseconds);
+  } catch (e) {
+    return val; 
+  }
+}, z.date());
+
 const formats = ["keynote", "qa", "performance", "workshop"] as const;
 
 const happenings = defineCollection({
@@ -62,7 +86,7 @@ const timetable = defineCollection({
     slug: z.string(),
     items: z.array(
       z.object({
-        datetime: z.date(),
+        datetime: SwissDateSchema,
         place: reference("places"),
         label: z.string(),
       }),

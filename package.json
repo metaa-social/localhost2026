@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@inlang/paraglide-astro": "^0.4.1",
+    "@js-temporal/polyfill": "^0.5.1",
     "@tailwindcss/vite": "^4.1.18",
     "astro": "^5.17.1",
     "hls-video-element": "^1.5.10",

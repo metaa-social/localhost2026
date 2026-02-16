@@ -1,8 +1,20 @@
 export function formatTime(dateInput: Date | string | number): string {
-  const date = new Date(dateInput);
+  let swissTime = dateInput;
+  if (
+    typeof dateInput === "string" &&
+    !dateInput.includes("Z") &&
+    !dateInput.includes("+")
+  ) {
+    // Treat as Swiss local time by appending offset
+    // dateInput += "+01:00"; // or handle DST dynamically
+    swissTime = dateInput + "+01:00";
+  }
+
+  const date = new Date(swissTime);
 
   if (isNaN(date.getTime())) return "";
   return date.toLocaleTimeString("en-GB", {
+    timezone: "Europe/Zurich",
     hour: "2-digit",
     minute: "2-digit",
   });
