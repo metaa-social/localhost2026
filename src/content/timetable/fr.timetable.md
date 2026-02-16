@@ -66,7 +66,7 @@ items:
   - datetime: 2026-03-22T09:30:00
     place: pyxis
     label: Accueil
-  - datetime: 2026-03-22T09:30:00
+  - datetime: 2026-03-22T10:00:00
     place: pyxis
     label: Début du workshop
   - datetime: 2026-03-22T12:00:00

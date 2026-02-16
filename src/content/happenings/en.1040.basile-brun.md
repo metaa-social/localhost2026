@@ -4,8 +4,8 @@ happeningLang: en
 name: Basile Brun
 imagePath: happenings/basil-brun.png
 titleImagePath: happenings/basil-brun-title.png
-datetime: 2026-03-21T14:30:00
-formats: ["keynote"]
+datetime: 2026-03-21T14:45:00
+formats: ["keynote", "qa"]
 place: amaretto
 instagram: https://www.instagram.com/chap0ng
 website: https://poesie-soft.xyz/

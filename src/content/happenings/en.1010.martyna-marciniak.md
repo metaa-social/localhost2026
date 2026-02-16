@@ -4,7 +4,7 @@ happeningLang: en
 name: Martyna Marciniak
 imagePath: happenings/martyna.png
 titleImagePath: happenings/martyna-title.png
-datetime: 2026-03-21T17:00:00
+datetime: 2026-03-21T18:30:00
 formats: ["keynote", "qa"]
 place: amaretto
 website: https://www.martyna.digital/

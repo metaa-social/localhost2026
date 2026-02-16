@@ -5,7 +5,7 @@ name: 2girls1comp
 punchline: Videogames Modding
 imagePath: happenings/2girls1comp.png
 titleImagePath: happenings/2girls1comp-title.png
-datetime: 2026-03-21T10:15:00
+datetime: 2026-03-21T16:00:00
 formats: ["keynote", "qa"]
 place: amaretto
 website: https://2girls1comp.xyz/

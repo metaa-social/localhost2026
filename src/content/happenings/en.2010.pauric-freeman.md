@@ -5,7 +5,7 @@ name: Pauric Freeman
 punchline: Multidisciplinary artist
 imagePath: happenings/pauric.png
 titleImagePath: happenings/pauric-title.png
-datetime: 2026-03-21T20:15:00
+datetime: 2026-03-21T20:30:00
 formats: ["performance"]
 place: amaretto
 website: https://pauricfreeman.com/

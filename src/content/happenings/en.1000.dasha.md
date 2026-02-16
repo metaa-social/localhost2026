@@ -7,7 +7,7 @@ imagePath: happenings/dasha.png
 titleImagePath: happenings/dasha-title.png 
 website: https://dashailina.com/
 instagram: https://www.instagram.com/dashesandcommas/?hl=en
-datetime: 2026-03-21T15:45:00
+datetime: 2026-03-21T17:15:00
 formats: ["keynote", "qa"]
 place: amaretto
 ---

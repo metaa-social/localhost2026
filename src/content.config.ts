@@ -40,7 +40,7 @@ const happenings = defineCollection({
     imagePath: z.string(),
     titleImagePath: z.string(),
     formats: z.array(z.enum(formats)),
-    datetime: z.date(),
+    datetime: SwissDateSchema,
     place: reference("places"),
     website: z.string().url().optional(),
     instagram: z.string().url().optional(),

@@ -5,8 +5,8 @@ name: Thomas Gaudin
 punchline: METAA Awardee
 imagePath: happenings/thomas.png
 titleImagePath: happenings/thomas-title.png
-datetime: 2026-03-21T13:15:00
-formats: ["keynote"]
+datetime: 2026-03-21T13:30:00
+formats: ["keynote", "qa"]
 place: amaretto
 instagram: https://www.instagram.com/thomas.obj/
 website: https://thomasgaudin.xyz/
