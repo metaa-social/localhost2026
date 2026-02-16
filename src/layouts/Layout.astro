@@ -9,7 +9,7 @@ const {
 
 const image = `${SITE}/og.jpg`;
 const currentUrl = new URL(Astro.url.pathname, SITE).toString();
-const locale = Astro.props.currentLocale;
+const locale = Astro.currentLocale;
 ---
 
 <!doctype html>
