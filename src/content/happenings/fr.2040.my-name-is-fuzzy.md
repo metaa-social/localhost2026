@@ -1,11 +1,10 @@
 ---
 lang: fr
-happeningLang: fr
 name: My name is Fuzzy
 punchline: DJ/VJ
 imagePath: happenings/fuzzy.png
 titleImagePath: happenings/fuzzy-title.png
-datetime: 2026-03-21T23:15:00
+datetime: 2026-03-21T21:30:00
 formats: ["performance"]
 place: amaretto
 website: https://www.mynameisfuzzy.ch/

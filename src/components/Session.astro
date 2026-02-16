@@ -42,7 +42,7 @@ if (instagram2) {
   <div class="session__info flex">
     <div class="session__info__format">
       <span>{formatsString}</span>
-      <span>({lang.toUpperCase()})</span>
+      {lang && <span>({lang.toUpperCase()})</span>}
     </div>
     <div class="separator"></div>
     <div class="session__info__datetime">{formattedDateTime}</div>
@@ -54,7 +54,7 @@ if (instagram2) {
     <div class="session__socials">
       {socials && socials.map(({label, href}, index) => (
       <>
-      <a href={href}>{m[label]()}</a>
+      <a href={href} target="_blank">{m[label]()}</a>
       { index < socials.length - 1 && <div class="separator"></div>}
       </>
       ))}

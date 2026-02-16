@@ -57,10 +57,10 @@ items:
     label: Pauric Freeman (Performance)
   - datetime: 2026-03-21T21:30:00
     place: amaretto
-    label: My name is Fuzzy (Performance, DJ/VJ)
+    label: My name is Fuzzy & Pixelle Panthère (Performance, DJ/VJ)
   - datetime: 2026-03-21T23:00:00
     place: amaretto
-    label: Softness (DJ/VJ)
+    label: Softness & Pixelle Panthère (DJ/VJ)
 
   # Sunday, March 22
   - datetime: 2026-03-22T09:30:00

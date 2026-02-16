@@ -34,7 +34,7 @@ const happenings = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/content/happenings" }),
   schema: z.object({
     lang: z.enum(["en", "fr"]),
-    happeningLang: z.enum(["en", "fr"]),
+    happeningLang: z.enum(["en", "fr"]).optional(),
     name: z.string(),
     punchline: z.string().optional(),
     imagePath: z.string(),

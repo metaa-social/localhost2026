@@ -1,6 +1,5 @@
 ---
 lang: en
-happeningLang: en
 name: Softness
 punchline: DJ/VJ
 imagePath: happenings/softness.png

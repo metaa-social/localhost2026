@@ -17,8 +17,6 @@ credits:
     type: organization
   - name: Paul Lëon
     type: organization
-  - name: Mylène Dreyer
-    type: organization
   - name: Lara Défayes
     type: organization
   - name: Joëlle Aeschlimann

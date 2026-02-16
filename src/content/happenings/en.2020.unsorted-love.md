@@ -1,11 +1,10 @@
 ---
 lang: en
-happeningLang: en
 name: Unsorted.Love
 punchline: Creative collective and physical space, Zurich
 imagePath: happenings/unsorted.png
 titleImagePath: happenings/unsorted-title.png
-datetime: 2026-03-20T19:30:00
+datetime: 2026-03-20T20:00:00
 formats: ["performance"]
 place: amaretto
 website: https://unsorted.love/

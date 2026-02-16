@@ -1,6 +1,5 @@
 ---
 lang: en
-happeningLang: en
 name: Pauric Freeman
 punchline: Multidisciplinary artist
 imagePath: happenings/pauric.png

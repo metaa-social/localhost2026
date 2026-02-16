@@ -98,7 +98,11 @@ const organizationCredits = credits.data.credits.filter(
 
 const identityCredits = credits.data.credits.filter(
   (c) => c.type === "identity",
-);
+  );
+
+// tickets
+const ticketsHref = globals.data.ticketsHref;
+//const ticketsHref = "#";
 ---
 
 <Layout title={title} description={description}>
@@ -122,7 +126,7 @@ const identityCredits = credits.data.credits.filter(
     <Button href="#metaa" class="">{m.btn_metaa()}</Button>
     <Button href="#partners" class="">{m.btn_partners()}</Button>
     <Button href={m.btn_langToggleHref()} class="">{m.btn_langToggle()}</Button>
-    <Button href={globals.data.ticketsHref} class="nav__action-button button--primary"
+    <Button href={ticketsHref} class="pointer-events-none nav__action-button button--primary"
       >{m.btn_book()}</Button
     >
   </nav>
@@ -261,8 +265,9 @@ const identityCredits = credits.data.credits.filter(
 
 
         <Button
-          href="https://google.com"
-          class="col-span-full button--primary mx-auto"
+          href={ticketsHref}
+          class="pointer-events-none col-span-full button--primary mx-auto"
+          target="_blank"
         >
           {m.btn_book()}
         </Button>

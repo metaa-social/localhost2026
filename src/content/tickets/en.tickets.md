@@ -17,9 +17,9 @@ tickets:
     price: 50
     type: event
   - label: Saturday pass (Reduced*)
-    price: 40
+    price: 25
     type: event
-  - label: Party Only (Performances & DJ/VJ)
+  - label: Evening Pass (Performances & DJ/VJ)
     price: 15
     type: event
   - label: Supporter pass

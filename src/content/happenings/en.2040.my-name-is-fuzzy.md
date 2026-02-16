@@ -1,6 +1,5 @@
 ---
 lang: en
-happeningLang: en
 name: My name is Fuzzy
 punchline: DJ/VJ
 imagePath: happenings/fuzzy.png
