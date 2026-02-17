@@ -1,4 +1,4 @@
----
+   ---
 slug: en
 title: localhost:2026
 description: A METAA association event on digital arts and experimental tech at Espace Amaretto & Pyxis. Talks, workshops and performances. Lausanne 20–22.03.2026 
@@ -20,3 +20,7 @@ ticketsHref: https://infomaniak.events/fr-ch/conferences/localhost2026/99766be8-
 Organized by METAA, localhost:2026 is a public event celebrating experimental artistic practices and digital cultures. The event returns for its second edition under the theme “Break the loop.”
 
 In music as in code, the loop is a fundamental structure. Breaking the loop is about interrupting what runs on autopilot, questioning habits and reliance on automation. It is opening practices to differing paths more in tune with the rhythm of the living.
+
+localhost:2026 highlights artists and designers whose experimental and critical practices break away from conventional cycles to offer an alternative vision of digital technologies. 
+
+Join the festival and its community of practitioners, educators, and researchers to connect, share, and collectively rethink our relationship with the digital world through these new imaginaries.
