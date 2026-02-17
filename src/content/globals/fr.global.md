@@ -19,6 +19,4 @@ ticketsHref: https://infomaniak.events/fr-ch/conferences/localhost2026/99766be8-
 
 Organisé par METAA, localhost:2026 est un événement public célébrant des pratiques artistiques expérimentales et des cultures numériques liées aux technologies. L’événement revient pour sa deuxième édition sous le thème « Break the loop ».
 
-En musique comme en programmation, la boucle est une structure fondamentale. Briser la boucle, c’est ainsi interrompre « ce qui roule » et prendre le temps d'interroger nos habitudes et la place accordée à l’automatisation. C’est ouvrir les pratiques à des alternatives mieux alignées au rythme du vivant. 
-
 localhost:2026 met en lumière des artistes et designers dont les pratiques expérimentales et critiques s'écartent des cycles habituels, offrant ainsi un point de vue novateur sur les technologies numériques. Rejoignez le festival et son panel de praticien·ne·x·s, d’éducateur·rice·x·s et de chercheur·euse·x·s pour échanger et repenser ensemble notre rapport au numérique à travers ces nouveaux imaginaires.
