@@ -27,6 +27,4 @@ credits:
     type: organization
   - name: Martial Grin
     type: organization
-  - name: Pierry Jaquillard
-    type: organization
 ---

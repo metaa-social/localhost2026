@@ -51,16 +51,16 @@ items:
     label: Dasha Ilina (Conférence, Q&R)
   - datetime: 2026-03-21T17:00:00
     place: amaretto
-    label: Martina Marciniak (Conférence, Q&R)
-  - datetime: 2026-03-21T20:30:00
+    label: Martyna Marciniak (Conférence, Q&R)
+  - datetime: 2026-03-21T19:30:00
     place: amaretto
     label: Pauric Freeman (Performance)
-  - datetime: 2026-03-21T21:30:00
+  - datetime: 2026-03-21T20:30:00
     place: amaretto
-    label: My name is Fuzzy (Performance, DJ/VJ)
-  - datetime: 2026-03-21T23:00:00
+    label: My name is Fuzzy (Live, VJ)
+  - datetime: 2026-03-21T22:00:00
     place: amaretto
-    label: Softness (DJ/VJ)
+    label: Softness (DJ, VJ)
 
   # Dimanche 22 mars
   - datetime: 2026-03-22T09:30:00

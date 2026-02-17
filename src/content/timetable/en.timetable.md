@@ -36,10 +36,10 @@ items:
     label: Doors Opening
   - datetime: 2026-03-21T13:30:00
     place: amaretto
-    label: Thomas Gaudin (METAA Prize Winner)
+    label: Thomas Gaudin (METAA Award Winner)
   - datetime: 2026-03-21T14:45:00
     place: amaretto
-    label: Basile Brun (METAA Prize Winner)
+    label: Basile Brun (METAA Award Winner)
   - datetime: 2026-03-21T16:00:00
     place: amaretto
     label: 2girls1comp (Keynote, Q&A)
@@ -51,16 +51,16 @@ items:
     label: Dasha Ilina (Keynote, Q&A)
   - datetime: 2026-03-21T17:00:00
     place: amaretto
-    label: Martina Marciniak (Keynote, Q&A)
+    label: Martyna Marciniak (Keynote, Q&A)
+  - datetime: 2026-03-21T19:30:00
+    place: amaretto
+    label: Pauric Freeman (Audiovisual Performance)
   - datetime: 2026-03-21T20:30:00
     place: amaretto
-    label: Pauric Freeman (Performance)
-  - datetime: 2026-03-21T21:30:00
+    label: My name is Fuzzy & Pixelle Panthère (Live, VJ)
+  - datetime: 2026-03-21T22:00:00
     place: amaretto
-    label: My name is Fuzzy & Pixelle Panthère (Performance, DJ/VJ)
-  - datetime: 2026-03-21T23:00:00
-    place: amaretto
-    label: Softness & Pixelle Panthère (DJ/VJ)
+    label: Softness & Pixelle Panthère (DJ, VJ)
 
   # Sunday, March 22
   - datetime: 2026-03-22T09:30:00
