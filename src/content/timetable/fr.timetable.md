@@ -54,7 +54,7 @@ items:
     label: Martyna Marciniak (Conférence, Q&R)
   - datetime: 2026-03-21T20:30:00
     place: amaretto
-    label: Pauric Freeman (Performance)
+    label: Pauric Freeman (Performance audiovisuelle)
   - datetime: 2026-03-21T21:30:00
     place: amaretto
     label: My name is Fuzzy (Live, VJ)
