@@ -2,7 +2,7 @@
 slug: fr
 title: localhost:2026
 description: Un événement de l'association METAA sur les arts numériques et la technologie expérimentale à l'Espace Amaretto & Pyxis. Conférences, ateliers et performances. Lausanne 20–22.03.2026
-punchline: Festival d'art médiatique expérimental et de cultures numériques
+punchline: Festival d'art et de cultures numériques
 dateText: 20→22.03.2026
 addressText: Lausanne, CH
 orgName: Media Experiments in Technology and Art Association
