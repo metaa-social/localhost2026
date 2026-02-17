@@ -1,4 +1,4 @@
-   ---
+---
 slug: en
 title: localhost:2026
 description: A METAA association event on digital arts and experimental tech at Espace Amaretto & Pyxis. Talks, workshops and performances. Lausanne 20–22.03.2026 
