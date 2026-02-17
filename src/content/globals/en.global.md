@@ -17,6 +17,6 @@ partnersText: localhost could not exist without our partners, METAA members and 
 ticketsHref: https://infomaniak.events/fr-ch/conferences/localhost2026/99766be8-70a2-4773-a185-6f43bdb62e46/event/1614411
 ---
 
-Organized by the METAA (Media Experiments in Technology and Art Association), localhost:2026 is a public event celebrating experimental artistic practices connected to emerging technologies.
+Organisé par METAA, localhost:2026 est un événement public célébrant des pratiques artistiques expérimentales et des cultures numériques  L’événement revient pour sa deuxième édition sous le thème « Break the loop ».
 
-This unique evening showcases emerging talents from the swiss and international digital scene while exploring the social, ecological, and political impacts of contemporary technologies.
+En musique comme en programmation, la boucle est une structure fondamentale. Briser la boucle, c’est ainsi interrompre « ce qui roule » et prendre le temps d'interroger nos habitudes et la place accordée à l’automatisation. C’est ouvrir les pratiques à des alternatives mieux alignées au rythme du vivant.
