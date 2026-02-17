@@ -14,7 +14,7 @@ export function formatTime(dateInput: Date | string | number): string {
 
   if (isNaN(date.getTime())) return "";
   return date.toLocaleTimeString("en-GB", {
-    timezone: "Europe/Zurich",
+    timeZone: "Europe/Zurich",
     hour: "2-digit",
     minute: "2-digit",
   });
