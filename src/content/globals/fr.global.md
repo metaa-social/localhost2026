@@ -19,4 +19,4 @@ ticketsHref: https://infomaniak.events/fr-ch/conferences/localhost2026/99766be8-
 
 Organisé par l'association METAA (Media Experiments in Technology and Art Association), localhost:2026 est un événement public célébrant les pratiques artistiques expérimentales liées aux technologies émergentes.
 
-Cette soirée unique met en lumière les talents émergents de la scène numérique suisse et internationale tout en explorant les impacts sociaux, écologiques et politiques des technologies contemporaines.
+Cette soirée met en lumière les talents émergents de la scène numérique suisse et internationale tout en explorant les impacts sociaux, écologiques et politiques des technologies contemporaines.
