@@ -21,6 +21,4 @@ Organized by METAA, localhost:2026 is a public event celebrating experimental ar
 
 In music as in code, the loop is a fundamental structure. Breaking the loop is about interrupting what runs on autopilot, questioning habits and reliance on automation. It is opening practices to differing paths more in tune with the rhythm of the living.
 
-localhost:2026 highlights artists and designers whose experimental and critical practices break away from conventional cycles to offer an alternative vision of digital technologies. 
-
-Join the festival and its community of practitioners, educators, and researchers to connect, share, and collectively rethink our relationship with the digital world through these new imaginaries.
+localhost:2026 highlights artists and designers whose experimental and critical practices break away from conventional cycles to offer an alternative vision of digital technologies. Join the festival and its community of practitioners, educators, and researchers to connect, share, and collectively rethink our relationship with the digital world through these new imaginaries.
