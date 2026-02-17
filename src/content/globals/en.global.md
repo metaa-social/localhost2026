@@ -17,7 +17,6 @@ partnersText: localhost could not exist without our partners, METAA members and 
 ticketsHref: https://infomaniak.events/fr-ch/conferences/localhost2026/99766be8-70a2-4773-a185-6f43bdb62e46/event/1614411
 ---
 
-Organized by METAA, localhost:2026 is a public event celebrating experimental artistic practices and digital cultures connected to technologies. 
-The event returns for its second edition under the theme “Break the loop.”
+Organized by the METAA (Media Experiments in Technology and Art Association), localhost:2026 is a public event celebrating experimental artistic practices connected to emerging technologies.
 
-localhost:2026 highlights artists and designers whose experimental and critical practices break away from conventional cycles to offer an alternative vision of digital technologies. Join the festival and its community of practitioners, educators, and researchers to connect, share, and collectively rethink our relationship with the digital world through these new imaginaries.
+This unique evening showcases emerging talents from the swiss and international digital scene while exploring the social, ecological, and political impacts of contemporary technologies.
