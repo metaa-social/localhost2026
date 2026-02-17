@@ -17,7 +17,7 @@ partnersText: localhost could not exist without our partners, METAA members and 
 ticketsHref: https://infomaniak.events/fr-ch/conferences/localhost2026/99766be8-70a2-4773-a185-6f43bdb62e46/event/1614411
 ---
 
-Organised by METAA and guided by the theme “Break the Loop”, localhost:2026 celebrates experimental artistic practices and digital cultures.
+Organized by METAA and guided by the theme “Break the Loop”, localhost:2026 celebrates experimental artistic practices and digital cultures.
 
 In music as in code, the loop is a fundamental structure. Breaking the loop is about interrupting what runs on autopilot, questioning reliance on automation. It is leading practices towards alternatives better aligned with the rhythm of life.
 
