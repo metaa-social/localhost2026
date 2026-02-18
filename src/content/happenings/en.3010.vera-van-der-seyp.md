@@ -1,7 +1,7 @@
 ---
 lang: en
 happeningLang: en
-name: Vera van der Seyp
+name: Vera van de Seyp
 imagePath: happenings/vera.jpg
 titleImagePath: happenings/vera-title.png
 datetime: 2026-03-21T09:00:00
