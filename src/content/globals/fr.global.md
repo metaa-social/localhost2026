@@ -19,6 +19,6 @@ ticketsHref: https://infomaniak.events/fr-ch/conferences/localhost2026/99766be8-
 
 Organisé par METAA et guidé par le thème “Break the loop”, localhost:2026 célèbre les pratiques artistiques expérimentales et les cultures numériques.
 
-En musique comme en programmation, la boucle est une structure fondamentale. La briser, c’est interrompre « ce qui roule » et interroger la place accordée à l’automatisation. C’est emmener les pratiques vers des alternatives mieux alignées au rythme du vivant. 
+En musique comme en programmation, la boucle est une structure fondamentale. La briser, c’est interrompre « ce qui roule » et interroger la place accordée à l’automatisation. C’est emmener les pratiques vers des alternatives mieux alignées au rythme du vivant.
 
-localhost:2026 met en lumière des artistes et designers dont les approches critiques et expérimentales viennent bousculer les schémas établis. Rejoignez le festival pour repenser collectivement notre rapport au numérique à travers ces nouveaux imaginaires.
+localhost:2026 met en lumière des artistes et designers dont les approches critiques et expérimentales viennent bousculer les schémas établis. Rejoignez le festival pour repenser collectivement notre rapport au numérique à travers ces nouveaux imaginaires.

@@ -21,4 +21,4 @@ Organized by METAA and guided by the theme “Break the Loop”, localhost:2026 
 
 In music as in code, the loop is a fundamental structure. Breaking the loop is about interrupting what runs on autopilot, questioning reliance on automation. It is leading practices towards alternatives better aligned with the rhythm of life.
 
-localhost:2026 highlights artists and designers whose experimental and critical approches challenge established norms. Join the festival to collectively rethink our relationship with the digital through these new imaginaries.
+localhost:2026 highlights artists and designers whose experimental and critical approches challenge established norms. Join the festival to collectively rethink our relationship with the digital through these new imaginaries.
