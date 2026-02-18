@@ -1,6 +1,6 @@
 ---
 lang: fr
-happeningLang: fr
+happeningLang: en
 name: Basile Brun
 imagePath: happenings/basil-brun.png
 titleImagePath: happenings/basil-brun-title.png
