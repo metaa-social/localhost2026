@@ -1,6 +1,6 @@
 ---
 lang: fr
-happeningLang: fr
+happeningLang: en
 name: 2girls1comp
 punchline: Modding de jeux vidéo
 imagePath: happenings/2girls1comp.png
