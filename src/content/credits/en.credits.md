@@ -9,7 +9,7 @@ credits:
     type: identity
     role: Development
     href: https://tiborudvari.com/
-  - name: SC Gerrit Medium
+  - name: SC Gerrit Medium by Sale Character
     type: identity
     role: Typeface
     href: https://www.salecharacter.com/typefaces/gerrit
