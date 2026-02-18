@@ -222,13 +222,13 @@
     @apply grid grid-cols-2 gap-3 tablet:gap-8 tablet:grid-cols-[auto_auto_1fr_auto_auto];
 
     & .pageHeader__title {
-      @apply col-span-full desktop:col-span-1;
+      @apply col-span-1;
       @apply not-tablet:leading-none;
       @apply tablet:order-1;
     }
 
     & .pageHeader__punchline {
-      @apply col-span-full desktop:col-span-1;
+      @apply col-span-1;
       @apply tablet:order-2;
     }
 
