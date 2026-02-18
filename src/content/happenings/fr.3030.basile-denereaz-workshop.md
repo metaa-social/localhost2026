@@ -4,7 +4,7 @@ happeningLang: fr
 name: Basile Dénéréaz
 punchline: Atelier
 imagePath: happenings/basil-denereaz.jpg
-titleImagePath: happenings/basil-denereaz-title.png
+titleImagePath: happenings/denereaz-3.jpg
 datetime: 2026-03-22T10:00:00
 formats: ["workshop"]
 place: pyxis

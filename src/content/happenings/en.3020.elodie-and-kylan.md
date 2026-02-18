@@ -4,7 +4,7 @@ happeningLang: fr
 name: Elodie and Kylan
 punchline: Workshop
 imagePath: happenings/elodie.png
-titleImagePath: happenings/elodie-title.png
+titleImagePath: happenings/ElodieKylan.jpg
 datetime: 2026-03-21T09:00:00
 formats: ["workshop"]
 place: pyxis

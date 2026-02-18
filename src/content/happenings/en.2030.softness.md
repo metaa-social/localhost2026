@@ -3,7 +3,7 @@ lang: en
 name: Softness
 punchline: DJ/VJ
 imagePath: happenings/softness.png
-titleImagePath: happenings/softness-title.png
+titleImagePath: happenings/softness.jpg
 datetime: 2026-03-21T23:00:00
 formats: ["performance"]
 place: amaretto

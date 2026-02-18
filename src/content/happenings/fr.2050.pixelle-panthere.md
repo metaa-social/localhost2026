@@ -2,7 +2,7 @@
 lang: fr
 name: Pixelle Panthere
 imagePath: happenings/pixelle.png
-titleImagePath: happenings/pixelle-title.png
+titleImagePath: happenings/pixelle.jpg
 datetime: 2026-03-21T21:30:00
 formats: ["performance"]
 place: amaretto

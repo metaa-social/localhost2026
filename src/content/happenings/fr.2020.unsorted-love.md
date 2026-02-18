@@ -3,7 +3,7 @@ lang: fr
 name: Unsorted.Love
 punchline: Collectif créatif et espace physique, Zurich
 imagePath: happenings/unsorted.png
-titleImagePath: happenings/unsorted-title.png
+titleImagePath: happenings/unsorted.jpg
 datetime: 2026-03-20T20:00:00
 formats: ["performance"]
 place: amaretto

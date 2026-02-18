@@ -3,7 +3,7 @@ lang: fr
 happeningLang: en
 name: Martyna Marciniak
 imagePath: happenings/martyna.png
-titleImagePath: happenings/martyna-title.png
+titleImagePath: happenings/martyna.jpg
 datetime: 2026-03-21T18:30:00
 formats: ["keynote", "qa"]
 place: amaretto

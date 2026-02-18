@@ -3,7 +3,7 @@ lang: fr
 name: Pauric Freeman
 punchline: Artiste multidisciplinaire
 imagePath: happenings/pauric.png
-titleImagePath: happenings/pauric-title.png
+titleImagePath: happenings/pauric.jpg
 datetime: 2026-03-21T20:30:00
 formats: ["performance"]
 place: amaretto

@@ -4,7 +4,7 @@ happeningLang: en
 name: Thomas Gaudin
 punchline: METAA Awardee
 imagePath: happenings/thomas.png
-titleImagePath: happenings/thomas-title.png
+titleImagePath: happenings/gaudin.jpg
 datetime: 2026-03-21T13:30:00
 formats: ["keynote", "qa"]
 place: amaretto

@@ -3,7 +3,7 @@ lang: en
 name: My name is Fuzzy
 punchline: DJ/VJ
 imagePath: happenings/fuzzy.png
-titleImagePath: happenings/fuzzy-title.png
+titleImagePath: happenings/fuzzy.jpg
 datetime: 2026-03-21T21:30:00
 formats: ["performance"]
 place: amaretto

@@ -4,7 +4,7 @@ happeningLang: en
 name: Dasha Ilina
 punchline: Technocritical artist
 imagePath: happenings/dasha.png 
-titleImagePath: happenings/dasha-title.png 
+titleImagePath: happenings/dasha.jpg
 website: https://dashailina.com/
 instagram: https://www.instagram.com/dashesandcommas/?hl=en
 datetime: 2026-03-21T17:15:00

@@ -25,7 +25,7 @@ const timetableSunday = timetable!.data.items.filter((e) => isSunday(e.datetime)
 
 <div class="timetable">
   <div class="timetable__day">
-    <Image imagePath="20.png" alt={m.friday()} class="timetable__day__image" />
+    <Image imagePath="20.jpg" alt={m.friday()} class="timetable__day__image" />
     <h3 class="timetable__day__title">{m.friday()}</h3>
     <div class="divider"></div>
     <TimetableBlock items={timetableFridayPyxis} class="tablet:mb-8" />
@@ -35,14 +35,14 @@ const timetableSunday = timetable!.data.items.filter((e) => isSunday(e.datetime)
   </div>
   <div class="timetable__day">
     <div class="divider desktop:hidden"></div>
-    <Image imagePath="21.png" alt={m.saturday()} class="timetable__day__image "/>
+    <Image imagePath="21.jpg" alt={m.saturday()} class="timetable__day__image "/>
     <h3 class="timetable__day__title">{m.saturday()}</h3>
     <div class="divider"></div>
     <TimetableBlock items={timetableSaturday} />
   </div>
   <div class="timetable__day">
     <div class="divider desktop:hidden"></div>
-    <Image imagePath="22.png" alt={m.sunday()} class="timetable__day__image" />
+    <Image imagePath="22.jpg" alt={m.sunday()} class="timetable__day__image" />
     <h3 class="timetable__day__title">{m.sunday()}</h3>
     <div class="divider"></div>
     <TimetableBlock items={timetableSunday} />

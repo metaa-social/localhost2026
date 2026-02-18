@@ -4,7 +4,7 @@ happeningLang: en
 name: 2girls1comp
 punchline: Videogames Modding
 imagePath: happenings/2girls1comp.png
-titleImagePath: happenings/2girls1comp-title.png
+titleImagePath: happenings/2girls-2.jpg
 datetime: 2026-03-21T16:00:00
 formats: ["keynote", "qa"]
 place: amaretto
