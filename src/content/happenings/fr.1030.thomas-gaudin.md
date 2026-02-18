@@ -1,6 +1,6 @@
 ---
 lang: fr
-happeningLang: fr
+happeningLang: en
 name: Thomas Gaudin
 punchline: Lauréat du prix METAA
 imagePath: happenings/thomas.png
