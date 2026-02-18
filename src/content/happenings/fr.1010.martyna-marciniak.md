@@ -1,6 +1,6 @@
 ---
 lang: fr
-happeningLang: fr
+happeningLang: en
 name: Martyna Marciniak
 imagePath: happenings/martyna.png
 titleImagePath: happenings/martyna-title.png
