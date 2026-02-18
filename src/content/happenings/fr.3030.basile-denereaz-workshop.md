@@ -1,8 +1,8 @@
 ---
 lang: fr
 happeningLang: fr
-name: Basile Dénéréaz
-punchline: Atelier
+name: Basil Dénéréaz
+punchline: Workshop
 imagePath: happenings/basil-denereaz.jpg
 titleImagePath: happenings/denereaz-3.jpg
 datetime: 2026-03-22T10:00:00
