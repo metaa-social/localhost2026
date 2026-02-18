@@ -1,6 +1,6 @@
 ---
 lang: fr
-happeningLang: fr
+happeningLang: en
 name: Dasha Ilina
 punchline: Artiste technocritique
 imagePath: happenings/dasha.png
