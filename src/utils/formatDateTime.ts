@@ -3,14 +3,24 @@ export function formatDateTime(dateInput: Date | string | number): string {
 
   if (isNaN(date.getTime())) return "";
 
-  const pad = (n: number) => n.toString().padStart(2, "0");
+  const options: Intl.DateTimeFormatOptions = {
+    timeZone: "Europe/Zurich",
+    day: "2-digit",
+    month: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false,
+  };
 
-  const day = pad(date.getDate());
-  const month = pad(date.getMonth() + 1); // months are 0-indexed
-  const hours = pad(date.getHours());
-  const minutes = pad(date.getMinutes());
+  // Format parts individually
+  const parts = new Intl.DateTimeFormat("de-CH", options).formatToParts(date);
 
-  return `${day}.${month}, ${hours}:${minutes}`;
+  const day = parts.find(p => p.type === "day")?.value ?? "00";
+  const month = parts.find(p => p.type === "month")?.value ?? "00";
+  const hour = parts.find(p => p.type === "hour")?.value ?? "00";
+  const minute = parts.find(p => p.type === "minute")?.value ?? "00";
+
+  return `${day}.${month}, ${hour}:${minute}`;
 }
 
 export default formatDateTime;
