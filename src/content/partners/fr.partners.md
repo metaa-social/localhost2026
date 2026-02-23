@@ -30,7 +30,7 @@ partners:
     href: https://www.hesge.ch/head/formations-recherche/master-en-media-design
     type: ["partner"]
   - label: dr-gabs
-    imagePath: partners/dr-gabs.svg
+    imagePath: partners/dr-gabs.png
     href: https://www.docteurgabs.ch/en/homepage/
     type: ["partner"]
   - label: papy-john
