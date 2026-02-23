@@ -18,5 +18,3 @@ It is run by a core group of five artists and is dedicated to the intersection o
 The space serves as a research hub for collaborative knowledge exchange, bridging the gap between high-level digital art theory and practical artistic practice.
 
 The collective operates through a variety of formats, including audiovisual performances, interactive installations, and educational workshops.
-
-Their work is characterized by an exploration of using
