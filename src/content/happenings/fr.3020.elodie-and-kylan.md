@@ -5,7 +5,7 @@ name: Elodie and Kylan
 punchline: Atelier
 imagePath: happenings/elodie.png
 titleImagePath: happenings/ElodieKylan.jpg
-datetime: 2026-03-21T09:00:00
+datetime: 2026-03-20T09:00:00
 formats: ["workshop"]
 place: pyxis
 instagram: https://www.instagram.com/elodidthat/
