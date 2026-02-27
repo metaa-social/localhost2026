@@ -4,7 +4,7 @@ happeningLang: en
 name: Vera van de Seyp
 imagePath: happenings/vera.jpg
 titleImagePath: happenings/veravds.jpg
-datetime: 2026-03-21T09:00:00
+datetime: 2026-03-20T09:00:00
 formats: ["workshop"]
 place: pyxis
 website: https://veravandeseyp.com/
