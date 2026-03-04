@@ -13,6 +13,8 @@ instagram: https://www.instagram.com/veravandeseyp/
 
 Break the Loop – Vera van de Seyp
 
+Presented by ECAL
+
 In this workshop, you will create a browser-based computational design tool to generate typographic animations and printed posters. The session explores the web browser as a design interface through iterative, code-driven sketching that balances structure and experimentation.
 
 Vera van de Seyp is a computational designer and educator working at the intersection of graphic design and code, focusing on generative systems, experimental typography, and custom creative tools.
