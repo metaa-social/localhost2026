@@ -9,6 +9,7 @@ formats: ["workshop"]
 place: pyxis
 website: https://veravandeseyp.com/
 instagram: https://www.instagram.com/veravandeseyp/
+soldOut: true
 ---
 
 Break the Loop – Vera van de Seyp

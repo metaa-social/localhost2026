@@ -9,6 +9,7 @@ formats: ["workshop"]
 place: pyxis
 website: https://veravandeseyp.com/
 instagram: https://www.instagram.com/veravandeseyp/
+soldOut: true
 ---
 
 Brisez la boucle – Vera van de Seyp

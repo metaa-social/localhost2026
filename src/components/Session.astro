@@ -11,7 +11,7 @@ if (!entry) {
   throw new Error('Could not find entry with id ' + id);
 }
 const { Content } = await render(entry);
-const {name, imagePath, titleImagePath, instagram, website, instagram2, website2, place, datetime, happeningLang: lang, formats} = entry.data;
+const {name, imagePath, titleImagePath, instagram, website, instagram2, website2, place, datetime, happeningLang: lang, formats, soldOut = false} = entry.data;
 const placeEntry = await getEntry(place);
 const formattedDateTime = formatDateTime(datetime);
 
@@ -45,6 +45,10 @@ if (instagram2) {
       {lang && <span>({lang.toUpperCase()})</span>}
     </div>
     <div class="separator"></div>
+    {soldOut && <>
+      <div class="session__info__soldOut">{m.soldOut().toUpperCase()}</div>
+      <div class="separator"></div>
+    </>}
     <div class="session__info__datetime">{formattedDateTime}</div>
     <div class="separator"></div>
     <div class="session__info__place">{placeEntry.data.name}</div>

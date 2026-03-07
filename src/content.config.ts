@@ -46,6 +46,7 @@ const happenings = defineCollection({
     instagram: z.string().url().optional(),
     website2: z.string().url().optional(),
     instagram2: z.string().url().optional(),
+    soldOut: z.boolean().optional(),
   }),
 });
 
