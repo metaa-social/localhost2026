@@ -13,10 +13,10 @@ tickets:
   - label: Workshop (Étudiant·e·x ECAL/HEAD)
     price: 10
     type: workshop
-  - label: Pass samedi
+  - label: Pass samedi (accès journée et soirée)
     price: 50
     type: event
-  - label: Pass samedi (Tarif réduit*)
+  - label: Pass samedi (Tarif réduit*) (accès journée et soirée)
     price: 25
     type: event
   - label: Pass soirée (Performances & DJ/VJ)
