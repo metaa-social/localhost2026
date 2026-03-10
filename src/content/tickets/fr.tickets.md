@@ -16,7 +16,7 @@ tickets:
   - label: Pass samedi (accès journée et soirée)
     price: 50
     type: event
-  - label: Pass samedi (Tarif réduit*) (accès journée et soirée)
+  - label: Pass samedi (Tarif réduit*)
     price: 25
     type: event
   - label: Pass soirée (Performances & DJ/VJ)

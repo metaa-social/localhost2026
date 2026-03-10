@@ -16,7 +16,7 @@ tickets:
   - label: Saturday pass (day + evening included)
     price: 50
     type: event
-  - label: Saturday pass (Reduced*) (day + evening included)
+  - label: Saturday pass (Reduced*)
     price: 25
     type: event
   - label: Evening Pass (Performances & DJ/VJ)
