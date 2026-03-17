@@ -1,13 +1,17 @@
 ---
 slug: fr
 partners:
+  - label: lausanne
+    imagePath: partners/lausanne.png
+    href: https://www.lausanne.ch/
+    type: ["sponsor"]
   - label: vd
     imagePath: partners/vd.svg
     href: https://www.vd.ch/
     type: ["sponsor"]
-  - label: lausanne
-    imagePath: partners/lausanne.png
-    href: https://www.lausanne.ch/
+  - label: pro-helvetia
+    imagePath: partners/pro-helvetia.svg
+    href: https://prohelvetia.ch/
     type: ["sponsor"]
   - label: ecal
     imagePath: partners/ecal.svg
