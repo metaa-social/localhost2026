@@ -10,6 +10,7 @@ formats: ["workshop"]
 place: pyxis
 website: https://www.youtube.com/@Shallow_Wave
 instagram: https://www.instagram.com/shallow__wave
+soldOut: true
 ---
 
 Introduction to modular synthesis with VCV Rack – Basil Denereaz
