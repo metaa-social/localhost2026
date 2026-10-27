@@ -9,13 +9,13 @@ partners:
     imagePath: partners/vd.svg
     href: https://www.vd.ch/
     type: ["sponsor"]
-  - label: pro-helvetia
-    imagePath: partners/pro-helvetia.svg
-    href: https://prohelvetia.ch/
-    type: ["sponsor"]
   - label: fondation-casino-barriere-montreux
     imagePath: partners/fondation-casino-montreux.svg
     href: https://fondationcasinobarrieremontreux.ch/
+    type: ["sponsor"]
+  - label: pro-helvetia
+    imagePath: partners/pro-helvetia.svg
+    href: https://prohelvetia.ch/
     type: ["sponsor"]
   - label: ecal
     imagePath: partners/ecal.svg
